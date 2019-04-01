@@ -1,4 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 606.198, 10 )
 
 [node name="Camera_Movement" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 459.696, 387.754 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 466.541, 433.883 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
 
