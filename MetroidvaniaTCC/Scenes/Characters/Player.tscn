@@ -9,6 +9,12 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = ExtResource( 3 )
-frame = 3
+frame = 0
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( -0.363792, 4.47196 )
+
+[node name="Stats" parent="." index="3"]
+speed = 150
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

@@ -6,6 +6,9 @@ var motion = Vector2(0, 0)
 
 var is_attacking = false
 
+var max_jump = 2
+var times_jump = 0
+
 func _physics_process(delta):
 	move()
 	jump(delta)
@@ -14,10 +17,12 @@ func _physics_process(delta):
 	if (not is_on_floor()):
 		motion.y += GRAVITY * delta
 	else:
+		times_jump = max_jump
 		motion.y = 0
 
 func jump(delta):
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and times_jump > 0:
+		times_jump -= 1
 		sprite.play("jump")
 		motion.y = stats.jump
 

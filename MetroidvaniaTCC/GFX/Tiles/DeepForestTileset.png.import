@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset.png-498b72b67642be6ae75dc59971d02e43.stex"
+path="res://.import/DeepForestTileset.png-b4dfab77483b0270e4b9634ed89d98c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Tiles/tileset.png"
-dest_files=[ "res://.import/tileset.png-498b72b67642be6ae75dc59971d02e43.stex" ]
+source_file="res://GFX/Tiles/DeepForestTileset.png"
+dest_files=[ "res://.import/DeepForestTileset.png-b4dfab77483b0270e4b9634ed89d98c0.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
