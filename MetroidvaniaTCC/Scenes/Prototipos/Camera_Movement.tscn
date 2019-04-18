@@ -18,7 +18,7 @@ motion_scale = Vector2( 0.3, 1 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2( -2546.94, 0 )
-scale = Vector2( 25.4913, 5.4244 )
+scale = Vector2( 25.4913, 2.75278 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -27,11 +27,11 @@ motion_scale = Vector2( 0.4, 1 )
 motion_mirroring = Vector2( 1020, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 0, -578.949 )
-scale = Vector2( 2.66, 2.45487 )
+position = Vector2( 0, -520.538 )
+scale = Vector2( 2.66, 2.40438 )
 texture = ExtResource( 2 )
 centered = false
-offset = Vector2( 0, 400 )
+offset = Vector2( 0, 350 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 245.944, 350.704 )
@@ -40,6 +40,7 @@ position = Vector2( 245.944, 350.704 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
+smoothing_speed = 3.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
