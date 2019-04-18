@@ -37,6 +37,7 @@ position = Vector2( 459.696, 387.754 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
+smoothing_speed = 3.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 466.541, 439.883 )
