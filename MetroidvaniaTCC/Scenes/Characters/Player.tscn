@@ -5,7 +5,8 @@
 [ext_resource path="res://Frames/player_frames.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://SFX/Sword-1.wav" type="AudioStream" id=4]
 
-[node name="Player" instance=ExtResource( 1 )]
+[node name="Player" index="0" instance=ExtResource( 1 )]
+collision_mask = 14
 collision/safe_margin = 1.0
 script = ExtResource( 2 )
 
@@ -22,4 +23,11 @@ position = Vector2( -0.363792, 4.47196 )
 [node name="Stats" parent="." index="3"]
 speed = 150
 
+[node name="DetectBody" parent="." index="4"]
+collision_mask = 10
+
+[node name="CollisionShape2D2" parent="DetectBody" index="0"]
+position = Vector2( -0.329853, 4.48601 )
+
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="DetectBody" to="." method="_on_DetectBody_area_entered"]

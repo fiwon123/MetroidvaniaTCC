@@ -6,6 +6,7 @@ var motion = Vector2(0, 0)
 
 var is_attacking = false
 var is_jumping = false
+var is_hurt = false
 
 var max_jump = 2
 var times_jump = 0
@@ -15,12 +16,21 @@ const sword_sound = ["res://SFX/Sword-1.wav"]
 
 func _process(delta):
 	fall(delta)
-	move()
-	jump()
-	attack()
+	
+	if stats.hp > 0:
+		move()
+		jump()
+		attack()
+		update_GUI()
+	else:
+		sprite.play("die")
+		motion.x = 0
+		
 	move_and_slide(motion, UP)
 
-
+func update_GUI():
+	Global.GUI.set_hp(stats.hp)
+	
 func fall(delta):
 	if is_on_floor():
 		times_jump = max_jump
@@ -35,13 +45,13 @@ func fall(delta):
 func jump():
 	if Input.is_action_just_pressed("jump") and times_jump > 0:
 		times_jump -= 1
-		if not is_attacking:
+		if not is_attacking and not is_hurt:
 			sprite.play("jump")
 		motion.y = stats.jump
 		is_jumping = true
 
 func move():
-	if not is_attacking and not is_jumping:
+	if not is_attacking and not is_jumping and not is_hurt:
 		sprite.play("move")
 		
 	if Input.is_action_pressed("right"):
@@ -57,12 +67,12 @@ func move():
 			$AudioStreamPlayer.stream = load(walk_sound[0])
 			$AudioStreamPlayer.play()
 	else:  
-		if not is_attacking and not is_jumping:
+		if not is_attacking and not is_jumping and not is_hurt:
 			sprite.play("idle")
 		motion.x = 0
 
 func attack():
-	if Input.is_action_just_pressed("attack") and not is_attacking:
+	if Input.is_action_just_pressed("attack") and not is_attacking and not is_hurt:
 		sprite.play("attack")
 		$AudioStreamPlayer.stream = load(sword_sound[0])
 		$AudioStreamPlayer.play()
@@ -72,3 +82,23 @@ func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "attack":
 		is_attacking = false
 		sprite.play("jump")
+	if sprite.animation == "hurt":
+		is_hurt = false
+	
+
+
+
+
+func _on_DetectBody_area_entered(area):
+	is_attacking = false
+	sprite.stop()
+	sprite.play("hurt")
+	if not sprite.flip_h:
+		motion.x = -1000
+		motion.y = -350
+	else:
+		motion.x = 1000
+		motion.y = -350
+	move_and_slide(motion, UP)
+	is_hurt = true
+	stats.hp -= 10
