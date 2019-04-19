@@ -10,6 +10,9 @@ var is_jumping = false
 var max_jump = 2
 var times_jump = 0
 
+const walk_sound = ["res://SFX/Step-3.wav"]
+const sword_sound = ["res://SFX/Sword-1.wav"]
+
 func _process(delta):
 	fall(delta)
 	move()
@@ -32,27 +35,37 @@ func fall(delta):
 func jump():
 	if Input.is_action_just_pressed("jump") and times_jump > 0:
 		times_jump -= 1
-		sprite.play("jump")
+		if not is_attacking:
+			sprite.play("jump")
 		motion.y = stats.jump
 		is_jumping = true
 
 func move():
 	if not is_attacking and not is_jumping:
 		sprite.play("move")
+		
 	if Input.is_action_pressed("right"):
 		motion.x = stats.speed + ATTACK
 		sprite.flip_h = false
+		if not $AudioStreamPlayer.playing and not is_jumping:
+			$AudioStreamPlayer.stream = load(walk_sound[0])
+			$AudioStreamPlayer.play()
 	elif Input.is_action_pressed("left"):
 		motion.x = -stats.speed + ATTACK
 		sprite.flip_h = true
+		if not $AudioStreamPlayer.playing and not is_jumping:
+			$AudioStreamPlayer.stream = load(walk_sound[0])
+			$AudioStreamPlayer.play()
 	else:  
 		if not is_attacking and not is_jumping:
 			sprite.play("idle")
 		motion.x = 0
 
 func attack():
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") and not is_attacking:
 		sprite.play("attack")
+		$AudioStreamPlayer.stream = load(sword_sound[0])
+		$AudioStreamPlayer.play()
 		is_attacking = true
 
 func _on_AnimatedSprite_animation_finished():

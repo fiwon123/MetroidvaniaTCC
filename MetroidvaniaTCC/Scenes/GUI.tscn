@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GFX/UI/bar_13.png" type="Texture" id=1]
+[ext_resource path="res://GFX/UI/bar_04.png" type="Texture" id=2]
+[ext_resource path="res://GFX/UI/heart_01.png" type="Texture" id=3]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 149.0
+margin_top = 55.0
+margin_right = 161.0
+margin_bottom = 63.0
+grow_horizontal = 2
+rect_scale = Vector2( 10, 5 )
+rect_pivot_offset = Vector2( 12, 4 )
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 26.2966
+margin_top = 26.6929
+margin_right = 66.2966
+margin_bottom = 66.6929
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
