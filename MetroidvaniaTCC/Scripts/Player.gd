@@ -90,15 +90,16 @@ func _on_AnimatedSprite_animation_finished():
 
 
 func _on_DetectBody_area_entered(area):
-	is_attacking = false
-	sprite.stop()
-	sprite.play("hurt")
-	if not sprite.flip_h:
-		motion.x = -1000
-		motion.y = -350
-	else:
-		motion.x = 1000
-		motion.y = -350
-	move_and_slide(motion, UP)
-	is_hurt = true
-	stats.hp -= 10
+	if area.is_in_group("Monster"):
+		is_attacking = false
+		sprite.stop()
+		sprite.play("hurt")
+		if not sprite.flip_h:
+			motion.x = -1000
+			motion.y = -350
+		else:
+			motion.x = 1000
+			motion.y = -350
+		move_and_slide(motion, UP)
+		is_hurt = true
+		stats.hp -= 10
