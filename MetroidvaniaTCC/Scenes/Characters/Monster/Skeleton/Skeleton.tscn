@@ -1,0 +1,39 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/Characters/Monster/Monster.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Skeleton.gd" type="Script" id=2]
+[ext_resource path="res://GFX/Skeleton/skeleton-1.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Skeleton/skeleton-2.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Skeleton/skeleton-3.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Skeleton/skeleton-4.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Skeleton/skeleton-5.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Skeleton/skeleton-6.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Skeleton/skeleton-7.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Skeleton/skeleton-8.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+} ]
+
+[node name="Skeleton" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( 2.19816, 6.48979 )
+
+[node name="CollisionShape2D2" parent="DetectBody" index="0"]
+position = Vector2( 2.09348, 6.28045 )
+
+[connection signal="area_entered" from="DetectBody" to="." method="_on_DetectBody_area_entered"]

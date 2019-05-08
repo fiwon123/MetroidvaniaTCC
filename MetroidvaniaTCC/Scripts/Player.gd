@@ -25,7 +25,7 @@ func _process(delta):
 	else:
 		sprite.play("die")
 		motion.x = 0
-		
+	
 	move_and_slide(motion, UP)
 
 func update_GUI():
@@ -56,13 +56,13 @@ func move():
 		
 	if Input.is_action_pressed("right"):
 		motion.x = stats.speed + ATTACK
-		sprite.flip_h = false
+		sprite.scale.x = 1
 		if not $AudioStreamPlayer.playing and not is_jumping:
 			$AudioStreamPlayer.stream = load(walk_sound[0])
 			$AudioStreamPlayer.play()
 	elif Input.is_action_pressed("left"):
 		motion.x = -stats.speed + ATTACK
-		sprite.flip_h = true
+		sprite.scale.x = -1
 		if not $AudioStreamPlayer.playing and not is_jumping:
 			$AudioStreamPlayer.stream = load(walk_sound[0])
 			$AudioStreamPlayer.play()
@@ -74,6 +74,7 @@ func move():
 func attack():
 	if Input.is_action_just_pressed("attack") and not is_attacking and not is_hurt:
 		sprite.play("attack")
+		$AnimatedSprite/DetectAttack.pause_mode = true
 		$AudioStreamPlayer.stream = load(sword_sound[0])
 		$AudioStreamPlayer.play()
 		is_attacking = true
@@ -81,6 +82,7 @@ func attack():
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "attack":
 		is_attacking = false
+		$AnimatedSprite/DetectAttack.pause_mode = false
 		sprite.play("jump")
 	if sprite.animation == "hurt":
 		is_hurt = false

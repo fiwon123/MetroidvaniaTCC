@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://GFX/Background/background.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Background/graveyard.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Region.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Part.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Characters/Monster/Skeleton/Skeleton.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 826.415, 193.114 )
@@ -25,6 +26,7 @@ __meta__ = {
 }
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
@@ -72,6 +74,11 @@ tile_data = PoolIntArray( 327704, 1, 0, 327705, 1, 1, 327706, 1, 1, 327707, 1, 1
 
 [node name="Part" parent="Regions/Main" instance=ExtResource( 8 )]
 position = Vector2( 349.644, 325.824 )
+
+[node name="Monsters" type="Node2D" parent="Regions/Main"]
+
+[node name="Skeleton" parent="Regions/Main/Monsters" instance=ExtResource( 9 )]
+position = Vector2( 388.551, 409.451 )
 
 [node name="Main2" parent="Regions" instance=ExtResource( 7 )]
 
