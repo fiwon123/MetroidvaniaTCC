@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends "res://Scripts/Character.gd"
 
 var state_machine = {}
 

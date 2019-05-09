@@ -74,7 +74,7 @@ func move():
 func attack():
 	if Input.is_action_just_pressed("attack") and not is_attacking and not is_hurt:
 		sprite.play("attack")
-		$AnimatedSprite/DetectAttack.pause_mode = true
+		$AnimatedSprite/DetectAttack/CollisionShape2D.disabled = false
 		$AudioStreamPlayer.stream = load(sword_sound[0])
 		$AudioStreamPlayer.play()
 		is_attacking = true
@@ -82,7 +82,7 @@ func attack():
 func _on_AnimatedSprite_animation_finished():
 	if sprite.animation == "attack":
 		is_attacking = false
-		$AnimatedSprite/DetectAttack.pause_mode = false
+		$AnimatedSprite/DetectAttack/CollisionShape2D.disabled = true
 		sprite.play("jump")
 	if sprite.animation == "hurt":
 		is_hurt = false
@@ -93,6 +93,22 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_DetectBody_area_entered(area):
 	if area.is_in_group("Monster"):
+		is_attacking = false
+		sprite.stop()
+		sprite.play("hurt")
+		if not sprite.flip_h:
+			motion.x = -1000
+			motion.y = -350
+		else:
+			motion.x = 1000
+			motion.y = -350
+		move_and_slide(motion, UP)
+		is_hurt = true
+		stats.hp -= 10
+
+
+func _on_DetectBody_body_entered(body):
+	if body.is_in_group("Monster"):
 		is_attacking = false
 		sprite.stop()
 		sprite.play("hurt")
