@@ -106,6 +106,11 @@ func _on_DetectBody_area_entered(area):
 		is_hurt = true
 		stats.hp -= 10
 
+func recover_life(quantity):
+	if stats.hp < stats.max_hp:
+		stats.hp += quantity
+		if stats.hp > stats.max_hp:
+			stats.hp = stats.max_hp
 
 func _on_DetectBody_body_entered(body):
 	if body.is_in_group("Monster"):

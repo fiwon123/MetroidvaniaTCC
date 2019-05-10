@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GFX/Background/background.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Background/graveyard.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Part.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Characters/Monster/Skeleton/Skeleton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Item/JumpPowerUp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 826.415, 193.114 )
@@ -114,6 +115,11 @@ shape = SubResource( 3 )
 [node name="JumpPowerUp" parent="." instance=ExtResource( 10 )]
 position = Vector2( 130.2, 415.064 )
 collision_mask = 5
+
+[node name="Spike" parent="." groups=[
+"Monster",
+] instance=ExtResource( 11 )]
+position = Vector2( 488.705, 425.988 )
 
 
 [editable path="Regions/Main/Part"]

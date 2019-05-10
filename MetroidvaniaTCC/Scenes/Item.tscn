@@ -4,7 +4,7 @@
 [ext_resource path="res://Fonts/HARVEST_.TTF" type="DynamicFontData" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.7032, 16.4147 )
+extents = Vector2( 5.97761, 4.58668 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
