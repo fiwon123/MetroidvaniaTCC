@@ -8,7 +8,7 @@ var is_attacking = false
 var is_jumping = false
 var is_hurt = false
 
-var max_jump = 2
+var max_jump = 1
 var times_jump = 0
 
 const walk_sound = ["res://SFX/Step-3.wav"]
