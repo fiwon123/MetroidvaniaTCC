@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://GFX/UI/bar_13.png" type="Texture" id=2]
 [ext_resource path="res://GFX/UI/bar_04.png" type="Texture" id=3]
 [ext_resource path="res://GFX/UI/heart_01.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Minimap.gd" type="Script" id=5]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -30,4 +31,15 @@ rect_scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
+
+[node name="Minimap" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="Minimap"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1024, 600 )
+color = Color( 0, 0, 0, 0.392157 )
 
