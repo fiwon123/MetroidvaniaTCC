@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MetroidvaniaTCC"
-run/main_scene="res://Scenes/Prototipos/Camera_Movement.tscn"
+run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]

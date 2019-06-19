@@ -17,6 +17,7 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = ExtResource( 3 )
+frame = 1
 
 [node name="DetectAttack" type="Area2D" parent="AnimatedSprite" index="0" groups=[
 "attack",
@@ -34,6 +35,9 @@ volume_db = -20.0
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -0.363792, 4.47196 )
+
+[node name="Stats" parent="." index="3"]
+speed = 150
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="DetectBody" to="." method="_on_DetectBody_area_entered"]

@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Part.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 296.41, 124.672 )
+extents = Vector2( 500, 200 )
 
 [node name="Part" type="Area2D"]
 script = ExtResource( 1 )

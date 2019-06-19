@@ -4,7 +4,21 @@
 [ext_resource path="res://GFX/UI/bar_13.png" type="Texture" id=2]
 [ext_resource path="res://GFX/UI/bar_04.png" type="Texture" id=3]
 [ext_resource path="res://GFX/UI/heart_01.png" type="Texture" id=4]
-[ext_resource path="res://Scripts/Minimap.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "show"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -32,15 +46,11 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
-[node name="Minimap" type="Control" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 5 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/show = SubResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="Minimap"]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_min_size = Vector2( 1024, 600 )
-color = Color( 0, 0, 0, 0.392157 )
+color = Color( 0, 0, 0, 0 )
 

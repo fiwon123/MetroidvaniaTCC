@@ -30,7 +30,6 @@ func _process(delta):
 
 func update_GUI():
 	Global.GUI.set_hp(stats.hp)
-	Global.GUI.set_minimap(global_position)
 	
 func fall(delta):
 	if is_on_floor():

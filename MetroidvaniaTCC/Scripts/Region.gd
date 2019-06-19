@@ -10,6 +10,7 @@ func _ready():
 
 func body_entered(body, part):
 	if body.is_in_group("Player"):
+		print(part.minX)
 		Global.Camera2D.limit_left = part.minX
 		Global.Camera2D.limit_top = part.minY
 		Global.Camera2D.limit_right = part.maxX
