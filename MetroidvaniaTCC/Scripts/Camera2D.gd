@@ -6,5 +6,4 @@ func _ready():
 	Global.Camera2D = self
 	
 func shake():
-	print("oi")
 	anim.play("shake")

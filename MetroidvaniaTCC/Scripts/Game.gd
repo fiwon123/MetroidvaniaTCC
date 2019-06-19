@@ -14,3 +14,4 @@ func _ready():
 
 func dialog_finish():
 	Global.Camera2D.shake()
+	$GUI/Dialogue.visible = false
