@@ -83,6 +83,10 @@ open_minimap={
 2d_physics/layer_3="Enviroment"
 2d_physics/layer_4="PickUp"
 
+[locale]
+
+translations=PoolStringArray( "res://Languages/languages.en.translation", "res://Languages/languages.pt_BR.translation" )
+
 [rendering]
 
 quality/2d/gles2_use_nvidia_rect_flicker_workaround=true

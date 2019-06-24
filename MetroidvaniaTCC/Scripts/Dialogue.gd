@@ -11,6 +11,7 @@ onready var text = $RichTextLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.dialogue = self
 	text.set_bbcode(dialog[page])
 	text.visible_characters = 0
 
