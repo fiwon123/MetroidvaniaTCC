@@ -82,6 +82,7 @@ open_minimap={
 2d_physics/layer_2="Monster"
 2d_physics/layer_3="Enviroment"
 2d_physics/layer_4="PickUp"
+2d_physics/layer_5="trigger"
 
 [locale]
 

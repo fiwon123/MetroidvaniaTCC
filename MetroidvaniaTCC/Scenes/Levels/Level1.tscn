@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://GFX/light/light.png" type="Texture" id=2]
@@ -10,12 +10,17 @@
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Dialogue.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Region.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Part.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Item/JumpPowerUp.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/Letter.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Fonts/HARVEST_.TTF" type="DynamicFontData" id=16]
+[ext_resource path="res://Scenes/Trigger.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Dialogues/Trigger-forest1-1.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/Region.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Part.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Item/JumpPowerUp.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Letter.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Fonts/HARVEST_.TTF" type="DynamicFontData" id=18]
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 95.0225, 66.989 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 288.316, 122.181 )
@@ -70,11 +75,11 @@ extents = Vector2( 422.703, 206.289 )
 
 [sub_resource type="DynamicFont" id=18]
 size = 64
-font_data = ExtResource( 16 )
+font_data = ExtResource( 18 )
 
 [sub_resource type="DynamicFont" id=19]
 size = 21
-font_data = ExtResource( 16 )
+font_data = ExtResource( 18 )
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -159,12 +164,21 @@ tile_data = PoolIntArray( 65767, 2, 0, 65768, 2, 1, 65769, 2, 1, 65770, 2, 1, 65
 [node name="GUI" parent="." instance=ExtResource( 9 )]
 
 [node name="Dialogue" parent="GUI" instance=ExtResource( 10 )]
+visible = false
+
+[node name="Trigger" parent="GUI" instance=ExtResource( 11 )]
+position = Vector2( 308.287, 370.574 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" parent="GUI/Trigger" index="0"]
+position = Vector2( 13.6439, 10.563 )
+shape = SubResource( 20 )
 
 [node name="Regions" type="Node2D" parent="."]
 
-[node name="Forest" parent="Regions" instance=ExtResource( 11 )]
+[node name="Forest" parent="Regions" instance=ExtResource( 13 )]
 
-[node name="Part" parent="Regions/Forest" instance=ExtResource( 12 )]
+[node name="Part" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 352.312, 324.354 )
 scale = Vector2( 0.999998, 1 )
@@ -173,133 +187,133 @@ scale = Vector2( 0.999998, 1 )
 scale = Vector2( 1.02002, 1 )
 shape = SubResource( 1 )
 
-[node name="Part2" parent="Regions/Forest" instance=ExtResource( 12 )]
+[node name="Part2" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 1176.9, 345.358 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part2" index="0"]
 shape = SubResource( 2 )
 
-[node name="Part5" parent="Regions/Forest" instance=ExtResource( 12 )]
+[node name="Part5" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 2846.07, 270.308 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part5" index="0"]
 shape = SubResource( 3 )
 
-[node name="Part3" parent="Regions/Forest" instance=ExtResource( 12 )]
+[node name="Part3" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 352.746, 130.841 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part3" index="0"]
 shape = SubResource( 4 )
 
-[node name="Part4" parent="Regions/Forest" instance=ExtResource( 12 )]
+[node name="Part4" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( -245.814, 245.849 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part4" index="0"]
 shape = SubResource( 5 )
 
-[node name="SubForest" parent="Regions" instance=ExtResource( 11 )]
+[node name="SubForest" parent="Regions" instance=ExtResource( 13 )]
 editor/display_folded = true
 
-[node name="Part" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part" parent="Regions/SubForest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 1204.49, 801.527 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part" index="0"]
 shape = SubResource( 6 )
 
-[node name="Part6" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part6" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1262.16, 1068.84 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part6" index="0"]
 shape = SubResource( 7 )
 
-[node name="Part9" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part9" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 2116.59, 1075.87 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part9" index="0"]
 shape = SubResource( 8 )
 
-[node name="Part10" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part10" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 3180.23, 885.997 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part10" index="0"]
 shape = SubResource( 9 )
 
-[node name="Part11" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part11" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 2881.36, 1462.65 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part11" index="0"]
 shape = SubResource( 10 )
 
-[node name="Part2" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part2" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 2108.56, 780.065 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part2" index="0"]
 shape = SubResource( 11 )
 
-[node name="Part3" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part3" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 390.135, 821.605 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part3" index="0"]
 shape = SubResource( 12 )
 
-[node name="Part4" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part4" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 367.067, 1281.57 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part4" index="0"]
 shape = SubResource( 13 )
 
-[node name="Part7" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part7" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 338.507, 1681.41 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part7" index="0"]
 shape = SubResource( 14 )
 
-[node name="Part8" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part8" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1213.62, 1739.21 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part8" index="0"]
 shape = SubResource( 15 )
 
-[node name="Part12" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part12" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1213.62, 1739.21 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part12" index="0"]
 position = Vector2( 775.317, -200.422 )
 shape = SubResource( 16 )
 
-[node name="Part5" parent="Regions/SubForest" instance=ExtResource( 12 )]
+[node name="Part5" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1266.49, 1373.13 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part5" index="0"]
 shape = SubResource( 17 )
 
-[node name="Castle" parent="Regions" instance=ExtResource( 11 )]
+[node name="Castle" parent="Regions" instance=ExtResource( 13 )]
 
-[node name="SubCastle" parent="Regions" instance=ExtResource( 11 )]
+[node name="SubCastle" parent="Regions" instance=ExtResource( 13 )]
 
-[node name="TopCastle" parent="Regions" instance=ExtResource( 11 )]
+[node name="TopCastle" parent="Regions" instance=ExtResource( 13 )]
 
-[node name="Forest2" parent="Regions" instance=ExtResource( 11 )]
+[node name="Forest2" parent="Regions" instance=ExtResource( 13 )]
 
-[node name="SubForest2" parent="Regions" instance=ExtResource( 11 )]
+[node name="SubForest2" parent="Regions" instance=ExtResource( 13 )]
 
-[node name="Vila" parent="Regions" instance=ExtResource( 11 )]
+[node name="Vila" parent="Regions" instance=ExtResource( 13 )]
 
-[node name="JumpPowerUp" parent="." instance=ExtResource( 13 )]
+[node name="JumpPowerUp" parent="." instance=ExtResource( 15 )]
 position = Vector2( 330.121, 1782.78 )
 collision_mask = 5
 
 [node name="Spike" parent="." groups=[
 "Monster",
-] instance=ExtResource( 14 )]
+] instance=ExtResource( 16 )]
 position = Vector2( 488.705, 425.988 )
 
-[node name="Letter" parent="." instance=ExtResource( 15 )]
+[node name="Letter" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1045.47, 408.014 )
 
 [node name="Label" type="Label" parent="."]
@@ -397,6 +411,8 @@ custom_fonts/font = SubResource( 19 )
 text = "Jump:
 Space"
 
+
+[editable path="GUI/Trigger"]
 
 [editable path="Regions/Forest/Part"]
 

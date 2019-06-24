@@ -17,7 +17,6 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = ExtResource( 3 )
-frame = 3
 
 [node name="DetectAttack" type="Area2D" parent="AnimatedSprite" index="0" groups=[
 "attack",
