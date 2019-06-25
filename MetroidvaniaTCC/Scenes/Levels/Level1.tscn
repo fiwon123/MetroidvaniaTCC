@@ -19,65 +19,65 @@
 [ext_resource path="res://Scenes/Letter.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Fonts/HARVEST_.TTF" type="DynamicFontData" id=18]
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 95.0225, 66.989 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 288.316, 122.181 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 519.95, 276.617 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 1133.48, 276.617 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 293.212, 65.2092 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 293.212, 211.937 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 447.049, 165.359 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 409.296, 87.7428 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 426.799, 87.7428 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 625.462, 320.416 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 592.058, 248.334 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 439.047, 200 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 352.566, 200 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 464.607, 229.486 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 390.034, 200 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 475.339, 156.012 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 287.223, 368.423 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 422.703, 206.289 )
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=19]
 size = 64
 font_data = ExtResource( 18 )
 
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=20]
 size = 21
 font_data = ExtResource( 18 )
 
@@ -172,7 +172,7 @@ script = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="GUI/Trigger" index="0"]
 position = Vector2( 13.6439, 10.563 )
-shape = SubResource( 20 )
+shape = SubResource( 1 )
 
 [node name="Regions" type="Node2D" parent="."]
 
@@ -185,35 +185,35 @@ scale = Vector2( 0.999998, 1 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part" index="0"]
 scale = Vector2( 1.02002, 1 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Part2" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 1176.9, 345.358 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part2" index="0"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Part5" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 2846.07, 270.308 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part5" index="0"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Part3" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 352.746, 130.841 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part3" index="0"]
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Part4" parent="Regions/Forest" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( -245.814, 245.849 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part4" index="0"]
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="SubForest" parent="Regions" instance=ExtResource( 13 )]
 editor/display_folded = true
@@ -223,74 +223,74 @@ editor/display_folded = true
 position = Vector2( 1204.49, 801.527 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part" index="0"]
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Part6" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1262.16, 1068.84 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part6" index="0"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Part9" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 2116.59, 1075.87 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part9" index="0"]
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="Part10" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 3180.23, 885.997 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part10" index="0"]
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="Part11" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 2881.36, 1462.65 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part11" index="0"]
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="Part2" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 2108.56, 780.065 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part2" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="Part3" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 390.135, 821.605 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part3" index="0"]
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="Part4" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 367.067, 1281.57 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part4" index="0"]
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="Part7" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 338.507, 1681.41 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part7" index="0"]
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="Part8" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1213.62, 1739.21 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part8" index="0"]
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 
 [node name="Part12" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1213.62, 1739.21 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part12" index="0"]
 position = Vector2( 775.317, -200.422 )
-shape = SubResource( 16 )
+shape = SubResource( 17 )
 
 [node name="Part5" parent="Regions/SubForest" instance=ExtResource( 14 )]
 position = Vector2( 1266.49, 1373.13 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part5" index="0"]
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="Castle" parent="Regions" instance=ExtResource( 13 )]
 
@@ -321,7 +321,7 @@ margin_left = 266.879
 margin_top = 1648.03
 margin_right = 459.879
 margin_bottom = 1721.03
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "BOSS 1"
 
 [node name="Label2" type="Label" parent="."]
@@ -329,7 +329,7 @@ margin_left = 3806.87
 margin_top = 104.119
 margin_right = 4630.87
 margin_bottom = 329.119
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "CASTELO
 
 PROBLEMA: PORTA BLOQUEADA"
@@ -339,7 +339,7 @@ margin_left = 317.088
 margin_top = 171.952
 margin_right = 562.088
 margin_bottom = 244.952
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "CAVERNA"
 
 [node name="Label4" type="Label" parent="."]
@@ -347,7 +347,7 @@ margin_left = 1058.74
 margin_top = 221.665
 margin_right = 1319.74
 margin_bottom = 294.665
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "CARTA"
 
 [node name="Label5" type="Label" parent="."]
@@ -355,7 +355,7 @@ margin_left = 2764.96
 margin_top = 185.412
 margin_right = 3025.96
 margin_bottom = 258.412
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "FLORESTA"
 
 [node name="Label6" type="Label" parent="."]
@@ -363,7 +363,7 @@ margin_left = 1174.94
 margin_top = 712.887
 margin_right = 1649.94
 margin_bottom = 785.887
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "TUTORIAL INIMIGO"
 
 [node name="Label7" type="Label" parent="."]
@@ -371,7 +371,7 @@ margin_left = 2795.31
 margin_top = 936.779
 margin_right = 3270.31
 margin_bottom = 1009.78
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "DIFICULDADE
 PULO DUPLO"
 
@@ -380,7 +380,7 @@ margin_left = 3729.2
 margin_top = 666.79
 margin_right = 4204.2
 margin_bottom = 815.79
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "ENTRADA DO
 SUBSOLO DO CASTELO"
 
@@ -389,7 +389,7 @@ margin_left = 112.109
 margin_top = 300.71
 margin_right = 175.109
 margin_bottom = 325.71
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 20 )
 text = "Tutorial"
 
 [node name="Label10" type="Label" parent="."]
@@ -397,7 +397,7 @@ margin_left = 111.622
 margin_top = 339.723
 margin_right = 255.622
 margin_bottom = 420.723
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 20 )
 text = "   W
 A S D or  Arrows
 MOVE"
@@ -407,7 +407,7 @@ margin_left = 459.073
 margin_top = 329.97
 margin_right = 562.073
 margin_bottom = 410.97
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 20 )
 text = "Jump:
 Space"
 
