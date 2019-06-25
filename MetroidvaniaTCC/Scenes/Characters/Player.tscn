@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Characters/Character/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Frames/player_frames.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://SFX/Sword-1.wav" type="AudioStream" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.84709, 6.49966 )
+
+[node name="Player" groups=[
+"Player",
+] instance=ExtResource( 1 )]
+collision_mask = 14
+collision/safe_margin = 1.0
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = ExtResource( 3 )
+
+[node name="DetectAttack" type="Area2D" parent="AnimatedSprite" index="0" groups=[
+"attack",
+]]
+position = Vector2( -0.0897446, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DetectAttack" index="0"]
+position = Vector2( 20.0131, -3.85903 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource( 4 )
+volume_db = -20.0
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( -0.363792, 4.47196 )
+
+[node name="Stats" parent="." index="3"]
+speed = 150
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="DetectBody" to="." method="_on_DetectBody_area_entered"]
+[connection signal="body_entered" from="DetectBody" to="." method="_on_DetectBody_body_entered"]
