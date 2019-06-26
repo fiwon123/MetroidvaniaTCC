@@ -21,6 +21,6 @@ custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.01
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
