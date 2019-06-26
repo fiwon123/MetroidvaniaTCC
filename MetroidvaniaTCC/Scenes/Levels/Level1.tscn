@@ -536,6 +536,7 @@ custom_fonts/font = SubResource( 21 )
 text = "Jump:
 Space"
 
+[connection signal="animation_finished" from="AnimationCutScenes" to="." method="_on_AnimationCutScenes_animation_finished"]
 
 [editable path="Player"]
 

@@ -13,7 +13,7 @@ func pause_animation():
 	print($AnimationCutScenes.playback_process_mode )
 
 func start_animation(anim, dialogue):
-	$AnimationCutScenes.play(anim)
+	$AnimationCutScenes.play("cena1")
 	ref_dialogue = dialogue
 	index = 0
 	start_dialogue()
@@ -27,11 +27,12 @@ func shake_camera():
 	Global.Camera2D.shake()
 
 func dialog_finish():
-	Global.dialogue.visible = false
 	index += 1
 	if index < ref_dialogue.size():
 		start_dialogue()
-	
-	is_stop = false
+
 	$AnimationCutScenes.playback_process_mode = AnimationPlayer.ANIMATION_PROCESS_IDLE
 	
+
+func _on_AnimationCutScenes_animation_finished(anim_name):
+	is_stop = false

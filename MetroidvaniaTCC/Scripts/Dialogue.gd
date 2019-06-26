@@ -15,6 +15,7 @@ func start(dialogue):
 	self.dialogue = dialogue
 	self.visible = true
 	page = 0
+	is_finish = false
 	text.visible_characters = 0
 	text.set_bbcode(tr(dialogue[page]))
 	$Timer.start()
