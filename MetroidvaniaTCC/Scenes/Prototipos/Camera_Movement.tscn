@@ -6,11 +6,14 @@
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=5]
 [ext_resource path="res://Tilesets/tileset_forest.tres" type="TileSet" id=6]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Region.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Part.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Map/Region.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Map/Part.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Item/JumpPowerUp.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Obstacle/Spike.tscn" type="PackedScene" id=11]
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 288.316, 122.181 )

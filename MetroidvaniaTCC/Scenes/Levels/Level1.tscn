@@ -7,17 +7,23 @@
 [ext_resource path="res://GFX/Background/graveyard.png" type="Texture" id=5]
 [ext_resource path="res://Tilesets/tileset_forest.tres" type="TileSet" id=6]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Dialogue.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Trigger.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/GUI/Camera2D.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/GUI/Dialogue.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/GUI/Trigger.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/Dialogues/Trigger-forest1-1.gd" type="Script" id=12]
-[ext_resource path="res://Scenes/Region.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Part.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Map/Region.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Map/Part.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Item/JumpPowerUp.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/Spike.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Letter.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Obstacle/Spike.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Item/Letter.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Fonts/HARVEST_.TTF" type="DynamicFontData" id=18]
+
+
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 95.0225, 66.989 )

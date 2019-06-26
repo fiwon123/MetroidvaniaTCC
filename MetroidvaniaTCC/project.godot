@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="MetroidvaniaTCC"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://Scenes/Screens/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scenes/Global.tscn"
+Global="*res://Scenes/Global/Global.tscn"
 
 [display]
 
