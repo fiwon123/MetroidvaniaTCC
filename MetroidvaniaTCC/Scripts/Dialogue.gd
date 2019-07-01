@@ -21,7 +21,7 @@ func start(dialogue):
 	$Timer.start()
 
 func _input(event):
-	if event is InputEventMouseButton && event.is_pressed():
+	if Input.is_action_just_pressed("dialogue"):
 		if text.visible_characters > text.get_total_character_count() and not is_finish:
 			if page < dialogue.size()-1:
 				page += 1
