@@ -1,13 +1,6 @@
-extends Area2D
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+extends "res://Scripts/Trigger.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	dialogue = [["forest-2-1", "forest-2-2", "forest-2-3", "forest-2-4", "forest-2-5"]]
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

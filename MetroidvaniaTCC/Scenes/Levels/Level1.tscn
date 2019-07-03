@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://GFX/light/light.png" type="Texture" id=2]
@@ -11,7 +11,7 @@
 [ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/GUI/Dialogue.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/GUI/Trigger.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scripts/Dialogues/Trigger-forest1-1.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/Dialogues/forest-1.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/Map/Region.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Map/Part.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Item/JumpPowerUp.tscn" type="PackedScene" id=15]
@@ -21,7 +21,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "cena1"
-length = 10.0
+length = 7.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Player/AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -29,7 +29,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 7 ),
+"times": PoolRealArray( 0, 3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ "rise", "idle" ]
@@ -41,7 +41,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4.4, 4.9, 7 ),
+"times": PoolRealArray( 0, 1, 1.5, 2.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true, false ]
@@ -53,7 +53,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 4.4, 8.9 ),
+"times": PoolRealArray( 0, 1.4, 3.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.2, 0.2 ), Vector2( 0.2, 0.2 ), Vector2( 10, 10 ) ]
@@ -65,10 +65,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 4.4, 8.9 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1.4, 3.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true, true, false ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Light2D:visible")
@@ -77,10 +77,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 4.4, 8.9 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1.4, 3.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true, true, false ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Player/AnimatedSprite:frame")
@@ -89,7 +89,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 7 ),
+"times": PoolRealArray( 0, 2.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 0, 0 ]
@@ -101,7 +101,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 8.9, 9.3, 9.6, 9.8, 10 ),
+"times": PoolRealArray( 3.7, 4.1, 4.4, 4.6, 4.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false, true, false ]
@@ -113,14 +113,17 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 2.5, 8 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
-"method": "pause_animation"
+"method": "start_dialogue"
 }, {
 "args": [  ],
-"method": "shake_camera"
+"method": "start_dialogue"
+}, {
+"args": [  ],
+"method": "start_dialogue"
 } ]
 }
 tracks/8/type = "value"
@@ -134,6 +137,57 @@ tracks/8/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 1 ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.1, 3.2, 6.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "pause_animation"
+}, {
+"args": [  ],
+"method": "pause_animation"
+}, {
+"args": [  ],
+"method": "pause_animation"
+} ]
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "shake_camera"
+} ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "cena2"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_dialogue"
+} ]
 }
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -207,18 +261,20 @@ __meta__ = {
 
 [node name="AnimationCutScenes" type="AnimationPlayer" parent="."]
 anims/cena1 = SubResource( 1 )
+anims/cena2 = SubResource( 22 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 position = Vector2( 346.422, 415.699 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 energy = 1.2
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.1, 1 )
@@ -295,7 +351,7 @@ visible = false
 position = Vector2( 308.287, 370.574 )
 script = ExtResource( 12 )
 
-[node name="CollisionShape2D" parent="GUI/DalogueManager/Trigger" index="0"]
+[node name="CollisionShape2D" parent="GUI/DalogueManager/Trigger" index="1"]
 position = Vector2( 26.0375, 17.3583 )
 shape = SubResource( 2 )
 
@@ -537,6 +593,7 @@ text = "Jump:
 Space"
 
 [connection signal="animation_finished" from="AnimationCutScenes" to="." method="_on_AnimationCutScenes_animation_finished"]
+[connection signal="input_event" from="Letter" to="Letter" method="_on_Trigger_input_event"]
 
 [editable path="Player"]
 

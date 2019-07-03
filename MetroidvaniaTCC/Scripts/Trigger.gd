@@ -1,20 +1,34 @@
 extends Area2D
 
-export(String, "cena1", "cena2", "cena3") var cena
+#Config Animation
+export (String, "cena1", "cena2", "cena3") var cena
 
+#Config interact
+export (bool) var is_need_interact
+var is_interact
+
+#Config Dialogue
 var dialogue = []
 var is_start = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+func _process(delta):
+	if Input.is_action_just_pressed("dialogue") and is_interact and is_need_interact:
+		start_animation()
 
 func _on_Trigger_body_entered(body):
 	if not is_start:
-		Global.game.start_animation(cena, dialogue)
-		is_start = true
+		if not is_need_interact:
+			start_animation()
+		
+		is_interact = true
+			
+func start_animation():
+	Global.game.start_animation(cena, dialogue)
+	is_start = true
+	queue_free()
+		
+	
+
+func _on_Trigger_body_exited(body):
+	is_interact = false
+
