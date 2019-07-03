@@ -15,12 +15,13 @@ func start(dialogue):
 	self.dialogue = dialogue
 	self.visible = true
 	page = 0
+	is_finish = false
 	text.visible_characters = 0
 	text.set_bbcode(tr(dialogue[page]))
 	$Timer.start()
 
 func _input(event):
-	if event is InputEventMouseButton && event.is_pressed():
+	if Input.is_action_just_pressed("dialogue"):
 		if text.visible_characters > text.get_total_character_count() and not is_finish:
 			if page < dialogue.size()-1:
 				page += 1

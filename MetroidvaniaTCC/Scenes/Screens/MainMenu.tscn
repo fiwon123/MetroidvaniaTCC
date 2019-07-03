@@ -34,7 +34,8 @@ __meta__ = {
 margin_right = 359.0
 margin_bottom = 82.0
 custom_fonts/font = SubResource( 1 )
-text = "Re: Member"
+text = "The Hero"
+align = 1
 
 [node name="ButtonStart" type="Button" parent="VBoxContainer"]
 margin_top = 102.0

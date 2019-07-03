@@ -14,19 +14,23 @@ var times_jump = 0
 const walk_sound = ["res://SFX/Step-3.wav"]
 const sword_sound = ["res://SFX/Sword-1.wav"]
 
+func _ready():
+	Global.player = self
+
 func _process(delta):
-	fall(delta)
-	
-	if stats.hp > 0:
-		move()
-		jump()
-		attack()
-		update_GUI()
-	else:
-		sprite.play("die")
-		motion.x = 0
-	
-	move_and_slide(motion, UP)
+	if (not Global.game.is_stop):
+		fall(delta)
+		
+		if stats.hp > 0:
+			move()
+			jump()
+			attack()
+			update_GUI()
+		else:
+			sprite.play("die")
+			motion.x = 0
+		
+		move_and_slide(motion, UP)
 
 func update_GUI():
 	Global.GUI.set_hp(stats.hp)
