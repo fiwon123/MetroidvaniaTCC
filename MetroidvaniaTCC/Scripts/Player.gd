@@ -31,6 +31,11 @@ func _process(delta):
 			motion.x = 0
 		
 		move_and_slide(motion, UP)
+	else:
+		is_attacking = false
+		is_jumping = false
+		is_hurt = false
+		times_jump = 0
 
 func update_GUI():
 	Global.GUI.set_hp(stats.hp)
