@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/GUI/Trigger.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Letter.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Tutorial/buttonZ.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.2689, 15.7105 )
@@ -12,10 +13,20 @@ script = ExtResource( 2 )
 cena = "cena2"
 is_need_interact = true
 
-[node name="Sprite" parent="." index="0"]
-scale = Vector2( 0.5, 0.5 )
+[node name="buttonZ" type="Sprite" parent="." index="0"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -0.166084, -30.0612 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="Sprite" parent="." index="1"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource( 1 )
 
+[node name="Tween" type="Tween" parent="." index="3"]
+
+[connection signal="body_entered" from="." to="." method="_on_Letter_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Letter_body_exited"]

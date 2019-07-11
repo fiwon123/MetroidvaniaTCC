@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Trigger.gd" type="Script" id=1]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Trigger" type="Area2D"]
 collision_layer = 16
@@ -12,7 +12,7 @@ cena = "cena1"
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_Trigger_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Trigger_body_exited"]
