@@ -17,7 +17,6 @@ func start_animation(anim, dialogue):
 	ref_dialogue = dialogue
 	index = 0
 	anim_cutscene.play(anim)
-	print("oi")
 	is_stop = true
 	
 func start_dialogue():
@@ -39,5 +38,4 @@ func showTutorialJump():
 	pass
 
 func _on_AnimationCutScenes_animation_finished(anim_name):
-	print("terminou")
 	is_stop = false
