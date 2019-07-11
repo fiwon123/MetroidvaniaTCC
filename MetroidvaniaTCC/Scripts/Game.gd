@@ -31,6 +31,12 @@ func dialog_finish():
 	index += 1
 
 	$AnimationCutScenes.playback_process_mode = AnimationPlayer.ANIMATION_PROCESS_IDLE
+	
+func showTutorialMove():
+	pass
+	
+func showTutorialJump():
+	pass
 
 func _on_AnimationCutScenes_animation_finished(anim_name):
 	print("terminou")
