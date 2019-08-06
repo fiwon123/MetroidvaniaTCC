@@ -18,8 +18,10 @@ func _ready():
 	Global.player = self
 
 func _process(delta):
+	
+	fall(delta)
+	
 	if (not Global.game.is_stop):
-		fall(delta)
 		
 		if stats.hp > 0:
 			move()
