@@ -8,9 +8,9 @@ func update(body, delta):
 	time += delta
 	body.sprite.play("move")
 	if direction.x == -1:	
-		body.sprite.flip_h = false
+		body.sprite.scale.x = 1
 	else:
-		body.sprite.flip_h = true
+		body.sprite.scale.x = -1
 	body.move_and_slide(direction * body.stats.speed, body.UP)
 	if time >= 1:
 		direction.x *= -1

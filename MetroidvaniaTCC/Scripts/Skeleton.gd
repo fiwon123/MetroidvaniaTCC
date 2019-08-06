@@ -2,12 +2,15 @@ extends "res://Scripts/Monster.gd"
 
 onready var life = load("res://Scenes/Item/Usable/Life.tscn")
 
+onready var animation = $AnimationPlayer
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	change_state("idle")
 
 func _on_DetectBody_area_entered(area):
 	if area.is_in_group("attack"):
+		change_state("hit")
 		stats.hp -= 50
 		if stats.hp <= 0:
 			var drop = life.instance()

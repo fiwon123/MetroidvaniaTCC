@@ -4,11 +4,13 @@
 [ext_resource path="res://Scripts/Monster.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Characters/StateMachine.tscn" type="PackedScene" id=3]
 
-
 [node name="Monster" groups=[
 "Monster",
 ] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="AnimatedSprite" parent="." index="0"]
+frame = 1
 
 [node name="StateMachine" parent="." index="4" instance=ExtResource( 3 )]
 

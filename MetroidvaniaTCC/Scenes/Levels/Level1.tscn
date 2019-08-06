@@ -560,7 +560,7 @@ position = Vector2( 1492.29, 393.527 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"
-frame = 2
+frame = 3
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 17 )]
 
@@ -632,7 +632,6 @@ shape = SubResource( 9 )
 [node name="SubForest" parent="Regions" instance=ExtResource( 22 )]
 
 [node name="Part" parent="Regions/SubForest" instance=ExtResource( 23 )]
-editor/display_folded = true
 position = Vector2( 1204.49, 801.527 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part" index="0"]
@@ -722,6 +721,7 @@ position = Vector2( 1274.84, 1364.78 )
 shape = SubResource( 21 )
 
 [node name="Trigger" parent="Regions/SubForest" instance=ExtResource( 20 )]
+editor/display_folded = true
 position = Vector2( 1530.17, 739.718 )
 script = ExtResource( 25 )
 cena = "cena4"
