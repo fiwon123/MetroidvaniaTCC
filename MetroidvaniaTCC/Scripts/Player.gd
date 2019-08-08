@@ -18,6 +18,7 @@ func _ready():
 	Global.player = self
 
 func _process(delta):
+	motion.x = 0
 	
 	fall(delta)
 	
@@ -32,12 +33,13 @@ func _process(delta):
 			sprite.play("die")
 			motion.x = 0
 		
-		move_and_slide(motion, UP)
 	else:
 		is_attacking = false
 		is_jumping = false
 		is_hurt = false
 		times_jump = 0
+		
+	move_and_slide(motion, UP)
 
 func update_GUI():
 	Global.GUI.set_hp(stats.hp)
