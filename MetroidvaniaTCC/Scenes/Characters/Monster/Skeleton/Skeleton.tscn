@@ -21,14 +21,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "hit",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "move",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "hit",
 "speed": 5.0
 } ]
 
@@ -50,7 +50,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.145098, 0.145098, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Skeleton" instance=ExtResource( 1 )]
+[node name="Skeleton" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]

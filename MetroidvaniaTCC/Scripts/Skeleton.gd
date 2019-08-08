@@ -14,6 +14,6 @@ func _on_DetectBody_area_entered(area):
 		stats.hp -= 50
 		if stats.hp <= 0:
 			var drop = life.instance()
-			drop.global_position = global_position
+			drop.position = position
 			get_parent().add_child(drop)
 			queue_free()
