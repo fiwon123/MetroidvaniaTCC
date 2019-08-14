@@ -3,6 +3,7 @@
 [ext_resource path="res://Scripts/Trigger.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.5815, 20.4219 )
 
 [node name="Trigger" type="Area2D"]
 collision_layer = 16

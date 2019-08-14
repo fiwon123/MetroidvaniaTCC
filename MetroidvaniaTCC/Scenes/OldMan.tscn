@@ -1,0 +1,39 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/GUI/Trigger.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/OldMan.gd" type="Script" id=2]
+[ext_resource path="res://GFX/Old_man/oldman-idle-1.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Old_man/oldman-idle-2.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Old_man/oldman-idle-3.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Old_man/oldman-idle-4.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Old_man/oldman-idle-5.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Old_man/oldman-idle-6.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Old_man/oldman-idle-7.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Old_man/oldman-idle-8.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Tutorial/buttonZ.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[node name="OldMan" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+cena = ""
+is_need_interact = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
+frames = SubResource( 1 )
+frame = 4
+playing = true
+
+[node name="Tween" type="Tween" parent="." index="3"]
+
+[node name="ButtonZ" type="Sprite" parent="." index="4"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
