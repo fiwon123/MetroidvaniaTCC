@@ -1,7 +1,7 @@
 extends Area2D
 
 #Config Animation
-export (String, "cena1", "cena2", "cena3", "cena4", "cena5") var cena
+export (String, "cena1", "cena2", "cena3", "cena4", "cena5", "cena6", "cena7") var cena
 
 #Config interact
 export (bool) var is_need_interact
