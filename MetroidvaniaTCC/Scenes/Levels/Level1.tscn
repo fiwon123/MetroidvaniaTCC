@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://GFX/light/light.png" type="Texture" id=2]
@@ -35,18 +35,19 @@
 [ext_resource path="res://Fonts/HARVEST_.TTF" type="DynamicFontData" id=33]
 [ext_resource path="res://Scenes/Barreira.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Scripts/Dialogues/forest-3.gd" type="Script" id=35]
-[ext_resource path="res://Scenes/OldMan.tscn" type="PackedScene" id=36]
-[ext_resource path="res://GFX/Objects/crate.png" type="Texture" id=37]
-[ext_resource path="res://GFX/Objects/crate-stack.png" type="Texture" id=38]
-[ext_resource path="res://GFX/Objects/wagon.png" type="Texture" id=39]
-[ext_resource path="res://GFX/Objects/well.png" type="Texture" id=40]
-[ext_resource path="res://GFX/Objects/tree-3.png" type="Texture" id=41]
-[ext_resource path="res://GFX/Objects/tree-2.png" type="Texture" id=42]
-[ext_resource path="res://GFX/Objects/tree-1.png" type="Texture" id=43]
-[ext_resource path="res://GFX/Objects/house-c.png" type="Texture" id=44]
-[ext_resource path="res://GFX/Objects/house-a.png" type="Texture" id=45]
-[ext_resource path="res://GFX/Objects/barrel.png" type="Texture" id=46]
-[ext_resource path="res://GFX/Objects/street-lamp.png" type="Texture" id=47]
+[ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Scenes/OldMan.tscn" type="PackedScene" id=37]
+[ext_resource path="res://GFX/Objects/crate.png" type="Texture" id=38]
+[ext_resource path="res://GFX/Objects/crate-stack.png" type="Texture" id=39]
+[ext_resource path="res://GFX/Objects/wagon.png" type="Texture" id=40]
+[ext_resource path="res://GFX/Objects/well.png" type="Texture" id=41]
+[ext_resource path="res://GFX/Objects/tree-3.png" type="Texture" id=42]
+[ext_resource path="res://GFX/Objects/tree-2.png" type="Texture" id=43]
+[ext_resource path="res://GFX/Objects/tree-1.png" type="Texture" id=44]
+[ext_resource path="res://GFX/Objects/house-c.png" type="Texture" id=45]
+[ext_resource path="res://GFX/Objects/house-a.png" type="Texture" id=46]
+[ext_resource path="res://GFX/Objects/barrel.png" type="Texture" id=47]
+[ext_resource path="res://GFX/Objects/street-lamp.png" type="Texture" id=48]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cena1"
@@ -423,7 +424,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=34]
+[sub_resource type="Animation" id=6]
 resource_name = "cena6"
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -478,7 +479,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=7]
 resource_name = "cena7"
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -533,98 +534,98 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 103.276, 61.6878 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 288.316, 122.181 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 519.95, 276.617 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 1203.35, 276.617 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 293.212, 65.2092 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 293.212, 211.937 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 447.049, 165.359 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 409.296, 87.7428 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 426.799, 87.7428 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 790, 320.416 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 592.058, 248.334 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 439.047, 200 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 352.566, 200 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 464.607, 229.486 )
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 390.034, 200 )
 
-[sub_resource type="RectangleShape2D" id=21]
+[sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 475.339, 156.012 )
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 287.223, 368.423 )
 
-[sub_resource type="RectangleShape2D" id=23]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 422.703, 206.289 )
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 73.1689, 13.0378 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 70.9155, 106.749 )
 
-[sub_resource type="RectangleShape2D" id=36]
+[sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 70.9155, 70 )
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 516, 220 )
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 493, 200 )
 
-[sub_resource type="RectangleShape2D" id=37]
+[sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 474, 200 )
 
-[sub_resource type="RectangleShape2D" id=28]
+[sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 600, 200 )
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=33]
 extents = Vector2( 724, 200 )
 
-[sub_resource type="RectangleShape2D" id=30]
+[sub_resource type="RectangleShape2D" id=34]
 extents = Vector2( 500, 359 )
 
-[sub_resource type="RectangleShape2D" id=38]
+[sub_resource type="RectangleShape2D" id=35]
 extents = Vector2( 500, 334 )
 
-[sub_resource type="RectangleShape2D" id=31]
+[sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 29, 85 )
 
-[sub_resource type="DynamicFont" id=32]
+[sub_resource type="DynamicFont" id=37]
 size = 64
 font_data = ExtResource( 33 )
 
-[sub_resource type="RectangleShape2D" id=33]
+[sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 37.6538, 75.6791 )
 
 [node name="Level1" type="Node2D"]
@@ -640,8 +641,8 @@ anims/cena2 = SubResource( 2 )
 anims/cena3 = SubResource( 3 )
 anims/cena4 = SubResource( 4 )
 anims/cena5 = SubResource( 5 )
-anims/cena6 = SubResource( 34 )
-anims/cena7 = SubResource( 35 )
+anims/cena6 = SubResource( 6 )
+anims/cena7 = SubResource( 7 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -819,11 +820,11 @@ collision_mask = 11
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 17 )]
-position = Vector2( 339, 414 )
+position = Vector2( 11399, 503 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"
-frame = 2
+frame = 1
 
 [node name="Camera2D" parent="Player" instance=ExtResource( 18 )]
 
@@ -848,7 +849,7 @@ script = ExtResource( 22 )
 
 [node name="CollisionShape2D" parent="GUI/DalogueManager/Trigger" index="1"]
 position = Vector2( 26.0375, 17.3583 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="Regions" type="Node2D" parent="."]
 
@@ -861,14 +862,14 @@ scale = Vector2( 0.999998, 1 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part" index="0"]
 scale = Vector2( 1.02002, 1 )
-shape = SubResource( 7 )
+shape = SubResource( 9 )
 
 [node name="Part2" parent="Regions/Forest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 1176.9, 345.358 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part2" index="0"]
-shape = SubResource( 8 )
+shape = SubResource( 10 )
 
 [node name="Part5" parent="Regions/Forest" instance=ExtResource( 24 )]
 editor/display_folded = true
@@ -876,21 +877,21 @@ position = Vector2( 2846.07, 270.308 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part5" index="0"]
 position = Vector2( 78.3823, 6.02939 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
 
 [node name="Part3" parent="Regions/Forest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 352.746, 130.841 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part3" index="0"]
-shape = SubResource( 10 )
+shape = SubResource( 12 )
 
 [node name="Part4" parent="Regions/Forest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( -245.814, 245.849 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part4" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="SubForest" parent="Regions" instance=ExtResource( 23 )]
 
@@ -899,7 +900,7 @@ editor/display_folded = true
 position = Vector2( 1204.49, 801.527 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part" index="0"]
-shape = SubResource( 12 )
+shape = SubResource( 14 )
 
 [node name="Skeleton" parent="Regions/SubForest/Part/Enemies" index="0" instance=ExtResource( 25 )]
 position = Vector2( 37.4703, -42.4652 )
@@ -912,77 +913,77 @@ editor/display_folded = true
 position = Vector2( 1262.16, 1068.84 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part6" index="0"]
-shape = SubResource( 13 )
+shape = SubResource( 15 )
 
 [node name="Part9" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 2116.59, 1075.87 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part9" index="0"]
-shape = SubResource( 14 )
+shape = SubResource( 16 )
 
 [node name="Part10" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 3349, 883 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part10" index="0"]
-shape = SubResource( 15 )
+shape = SubResource( 17 )
 
 [node name="Part11" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 2881.36, 1462.65 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part11" index="0"]
-shape = SubResource( 16 )
+shape = SubResource( 18 )
 
 [node name="Part2" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 2108.56, 780.065 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part2" index="0"]
-shape = SubResource( 17 )
+shape = SubResource( 19 )
 
 [node name="Part3" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 390.135, 821.605 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part3" index="0"]
-shape = SubResource( 18 )
+shape = SubResource( 20 )
 
 [node name="Part4" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 367.067, 1281.57 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part4" index="0"]
-shape = SubResource( 19 )
+shape = SubResource( 21 )
 
 [node name="Part7" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 338.507, 1681.41 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part7" index="0"]
-shape = SubResource( 20 )
+shape = SubResource( 22 )
 
 [node name="Part8" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 1210.7, 1739.21 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part8" index="0"]
-shape = SubResource( 21 )
+shape = SubResource( 23 )
 
 [node name="Part12" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 1994.68, 1538.71 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part12" index="0"]
-shape = SubResource( 22 )
+shape = SubResource( 24 )
 
 [node name="Part5" parent="Regions/SubForest" instance=ExtResource( 24 )]
 editor/display_folded = true
 position = Vector2( 1274.84, 1364.78 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part5" index="0"]
-shape = SubResource( 23 )
+shape = SubResource( 25 )
 
 [node name="Trigger" parent="Regions/SubForest" instance=ExtResource( 21 )]
 editor/display_folded = true
@@ -992,7 +993,7 @@ cena = "cena4"
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Trigger" index="1"]
 position = Vector2( 1.3269, -9.95129 )
-shape = SubResource( 24 )
+shape = SubResource( 26 )
 
 [node name="Trigger2" parent="Regions/SubForest" instance=ExtResource( 21 )]
 position = Vector2( 430.287, 1710.5 )
@@ -1000,7 +1001,7 @@ script = ExtResource( 27 )
 cena = "cena6"
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Trigger2" index="1"]
-shape = SubResource( 25 )
+shape = SubResource( 27 )
 
 [node name="Trigger3" parent="Regions/SubForest" instance=ExtResource( 21 )]
 position = Vector2( 2757, 1126 )
@@ -1009,7 +1010,7 @@ cena = "cena5"
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Trigger3" index="1"]
 position = Vector2( 2, -5 )
-shape = SubResource( 36 )
+shape = SubResource( 28 )
 
 [node name="Castle" parent="Regions" instance=ExtResource( 23 )]
 
@@ -1024,13 +1025,13 @@ editor/display_folded = true
 position = Vector2( 5664, 410 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part3" index="0"]
-shape = SubResource( 26 )
+shape = SubResource( 29 )
 
 [node name="Part4" parent="Regions/Castle" instance=ExtResource( 24 )]
 position = Vector2( 6675, 210 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part4" index="0"]
-shape = SubResource( 27 )
+shape = SubResource( 30 )
 
 [node name="Part5" parent="Regions/Castle" instance=ExtResource( 24 )]
 position = Vector2( 7692, -155 )
@@ -1045,31 +1046,31 @@ position = Vector2( 5710, -178 )
 position = Vector2( 6695, -193 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part10" index="0"]
-shape = SubResource( 37 )
+shape = SubResource( 31 )
 
 [node name="Part11" parent="Regions/Castle" instance=ExtResource( 24 )]
 position = Vector2( 6165, -613 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part11" index="0"]
-shape = SubResource( 28 )
+shape = SubResource( 32 )
 
 [node name="Part12" parent="Regions/Castle" instance=ExtResource( 24 )]
 position = Vector2( 7509, -612 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part12" index="0"]
-shape = SubResource( 29 )
+shape = SubResource( 33 )
 
 [node name="Part6" parent="Regions/Castle" instance=ExtResource( 24 )]
 position = Vector2( 7696, 423 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part6" index="0"]
-shape = SubResource( 30 )
+shape = SubResource( 34 )
 
 [node name="Part7" parent="Regions/Castle" instance=ExtResource( 24 )]
 position = Vector2( 6687, 753 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part7" index="0"]
-shape = SubResource( 38 )
+shape = SubResource( 35 )
 
 [node name="Trigger" parent="Regions/Castle" instance=ExtResource( 21 )]
 position = Vector2( 4184, 814 )
@@ -1077,7 +1078,7 @@ script = ExtResource( 29 )
 cena = "cena7"
 
 [node name="CollisionShape2D" parent="Regions/Castle/Trigger" index="1"]
-shape = SubResource( 31 )
+shape = SubResource( 36 )
 
 [node name="Forest2" parent="Regions" instance=ExtResource( 23 )]
 
@@ -1112,7 +1113,7 @@ margin_left = 266.879
 margin_top = 1648.03
 margin_right = 459.879
 margin_bottom = 1721.03
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 37 )
 text = "BOSS 1"
 
 [node name="Label2" type="Label" parent="."]
@@ -1120,7 +1121,7 @@ margin_left = 3166.42
 margin_top = 134.036
 margin_right = 3990.42
 margin_bottom = 359.036
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 37 )
 text = "CASTELO
 
 PROBLEMA: PORTA BLOQUEADA"
@@ -1130,7 +1131,7 @@ margin_left = 2764.96
 margin_top = 185.412
 margin_right = 3025.96
 margin_bottom = 258.412
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 37 )
 text = "FLORESTA"
 
 [node name="Label7" type="Label" parent="."]
@@ -1138,7 +1139,7 @@ margin_left = 2795.31
 margin_top = 936.779
 margin_right = 3270.31
 margin_bottom = 1009.78
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 37 )
 text = "DIFICULDADE
 PULO DUPLO"
 
@@ -1147,13 +1148,11 @@ margin_left = 3729.2
 margin_top = 666.79
 margin_right = 4204.2
 margin_bottom = 815.79
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 37 )
 text = "ENTRADA DO
 SUBSOLO DO CASTELO"
 
 [node name="Barreira" parent="." instance=ExtResource( 34 )]
-editor/display_folded = true
-visible = false
 position = Vector2( 4082.35, 373.606 )
 
 [node name="Trigger" parent="Barreira" instance=ExtResource( 21 )]
@@ -1163,114 +1162,133 @@ cena = "cena3"
 
 [node name="CollisionShape2D" parent="Barreira/Trigger" index="1"]
 position = Vector2( 32.9622, -7.56506 )
-shape = SubResource( 33 )
+shape = SubResource( 38 )
 
-[node name="OldMan" parent="." instance=ExtResource( 36 )]
-position = Vector2( 11813, 584 )
+[node name="Lever" parent="Barreira" instance=ExtResource( 36 )]
+position = Vector2( 137.49, 42.8138 )
+
+[node name="Barreira2" parent="." instance=ExtResource( 34 )]
+editor/display_folded = true
+position = Vector2( 8274.17, 515.786 )
+
+[node name="Lever" parent="Barreira2" instance=ExtResource( 36 )]
+position = Vector2( -1822.82, 451.752 )
+
+[node name="Barreira3" parent="." instance=ExtResource( 34 )]
+position = Vector2( 6165, -44 )
+need_attack = true
+
+[node name="Barreira4" parent="." instance=ExtResource( 34 )]
+position = Vector2( 6782, -521 )
+need_attack = true
+
+[node name="OldMan" parent="." instance=ExtResource( 37 )]
+position = Vector2( 11813, 585 )
 cena = "cena7"
 
 [node name="Objects" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 11702, 634 )
 
 [node name="crate" type="Sprite" parent="Objects"]
 position = Vector2( 467, -52 )
-texture = ExtResource( 37 )
+texture = ExtResource( 38 )
 
 [node name="crate-stack" type="Sprite" parent="Objects"]
 position = Vector2( 524, -67 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="crate-stack2" type="Sprite" parent="Objects"]
 position = Vector2( 523, -130 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="wagon" type="Sprite" parent="Objects"]
 position = Vector2( 397, -66 )
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 
 [node name="well" type="Sprite" parent="Objects"]
 position = Vector2( -332, -58 )
-texture = ExtResource( 40 )
+texture = ExtResource( 41 )
 
 [node name="wagon2" type="Sprite" parent="Objects"]
 position = Vector2( -851, -61 )
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 
 [node name="wagon3" type="Sprite" parent="Objects"]
 position = Vector2( -738, -64 )
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 
 [node name="wagon4" type="Sprite" parent="Objects"]
 position = Vector2( -976, -65 )
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 
 [node name="tree-3" type="Sprite" parent="Objects"]
 position = Vector2( -576, -119 )
-texture = ExtResource( 41 )
+texture = ExtResource( 42 )
 
 [node name="tree-2" type="Sprite" parent="Objects"]
 position = Vector2( -1152, -88 )
-texture = ExtResource( 42 )
+texture = ExtResource( 43 )
 
 [node name="tree-1" type="Sprite" parent="Objects"]
 position = Vector2( -413, -90 )
-texture = ExtResource( 43 )
+texture = ExtResource( 44 )
 
 [node name="tree-4" type="Sprite" parent="Objects"]
 position = Vector2( -221, -117 )
-texture = ExtResource( 41 )
+texture = ExtResource( 42 )
 
 [node name="house-c" type="Sprite" parent="Objects"]
 position = Vector2( 231, -126 )
-texture = ExtResource( 44 )
+texture = ExtResource( 45 )
 
 [node name="house-a" type="Sprite" parent="Objects"]
 position = Vector2( -61, -124 )
-texture = ExtResource( 45 )
+texture = ExtResource( 46 )
 
 [node name="house-c2" type="Sprite" parent="Objects"]
 position = Vector2( -1087, -125 )
-texture = ExtResource( 44 )
+texture = ExtResource( 45 )
 
 [node name="barrel" type="Sprite" parent="."]
 position = Vector2( 11061, 591 )
-texture = ExtResource( 46 )
+texture = ExtResource( 47 )
 
 [node name="barrel2" type="Sprite" parent="."]
 position = Vector2( 11202, 591 )
-texture = ExtResource( 46 )
+texture = ExtResource( 47 )
 
 [node name="barrel3" type="Sprite" parent="."]
 position = Vector2( 12060, 593 )
-texture = ExtResource( 46 )
+texture = ExtResource( 47 )
 
 [node name="barrel4" type="Sprite" parent="."]
 position = Vector2( 11565, 592 )
-texture = ExtResource( 46 )
+texture = ExtResource( 47 )
 
 [node name="street-lamp" type="Sprite" parent="."]
 position = Vector2( 10769.5, 553 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="street-lamp2" type="Sprite" parent="."]
 position = Vector2( 11789.5, 554 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="street-lamp3" type="Sprite" parent="."]
 position = Vector2( 10383.5, 551 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="street-lamp4" type="Sprite" parent="."]
 position = Vector2( 11186.5, 549 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="street-lamp5" type="Sprite" parent="."]
 position = Vector2( 11485.5, 553 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="street-lamp6" type="Sprite" parent="."]
 position = Vector2( 12043, 552 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [connection signal="animation_finished" from="AnimationCutScenes" to="." method="_on_AnimationCutScenes_animation_finished"]
 [connection signal="input_event" from="Letter" to="Letter" method="_on_Trigger_input_event"]
@@ -1336,3 +1354,7 @@ texture = ExtResource( 47 )
 [editable path="Regions/Castle/Trigger"]
 
 [editable path="Barreira/Trigger"]
+
+[editable path="Barreira3"]
+
+[editable path="Barreira4"]

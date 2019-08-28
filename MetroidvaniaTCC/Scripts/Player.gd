@@ -4,6 +4,8 @@ var ATTACK = 0
 
 var motion = Vector2(0, 0)
 
+var have_new_attack = false
+
 var is_attacking = false
 var is_jumping = false
 var is_hurt = false

@@ -3,6 +3,8 @@ extends Area2D
 #Config Animation
 export (String, "cena1", "cena2", "cena3", "cena4", "cena5", "cena6", "cena7") var cena
 
+export (bool) var is_need_destroy = true
+
 #Config interact
 export (bool) var is_need_interact
 var is_interact
@@ -25,7 +27,8 @@ func _on_Trigger_body_entered(body):
 func start_animation():
 	Global.game.start_animation(cena, dialogue)
 	is_start = true
-	queue_free()
+	if (is_need_destroy):
+		queue_free()
 		
 	
 
