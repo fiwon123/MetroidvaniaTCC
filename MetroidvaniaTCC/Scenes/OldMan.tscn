@@ -20,15 +20,15 @@ animations = [ {
 "speed": 6.0
 } ]
 
-[node name="OldMan" index="0" instance=ExtResource( 1 )]
+[node name="OldMan" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-cena = ""
+cena = "cena9"
 is_need_destroy = false
 is_need_interact = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 frames = SubResource( 1 )
-frame = 12
+frame = 11
 playing = true
 
 [node name="Tween" type="Tween" parent="." index="3"]

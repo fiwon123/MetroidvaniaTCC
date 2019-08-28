@@ -1,7 +1,7 @@
 extends Area2D
 
 #Config Animation
-export (String, "cena1", "cena2", "cena3", "cena4", "cena5", "cena6", "cena7") var cena
+export (String, "cena1", "cena2", "cena3", "cena4", "cena5", "cena6", "cena7", "cena8", "cena9", "cena10") var cena
 
 export (bool) var is_need_destroy = true
 

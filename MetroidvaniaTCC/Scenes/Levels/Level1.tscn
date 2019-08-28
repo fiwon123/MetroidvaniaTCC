@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://GFX/light/light.png" type="Texture" id=2]
@@ -36,18 +36,20 @@
 [ext_resource path="res://Scenes/Barreira.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Scripts/Dialogues/forest-3.gd" type="Script" id=35]
 [ext_resource path="res://Scenes/Lever.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Scenes/OldMan.tscn" type="PackedScene" id=37]
-[ext_resource path="res://GFX/Objects/crate.png" type="Texture" id=38]
-[ext_resource path="res://GFX/Objects/crate-stack.png" type="Texture" id=39]
-[ext_resource path="res://GFX/Objects/wagon.png" type="Texture" id=40]
-[ext_resource path="res://GFX/Objects/well.png" type="Texture" id=41]
-[ext_resource path="res://GFX/Objects/tree-3.png" type="Texture" id=42]
-[ext_resource path="res://GFX/Objects/tree-2.png" type="Texture" id=43]
-[ext_resource path="res://GFX/Objects/tree-1.png" type="Texture" id=44]
-[ext_resource path="res://GFX/Objects/house-c.png" type="Texture" id=45]
-[ext_resource path="res://GFX/Objects/house-a.png" type="Texture" id=46]
-[ext_resource path="res://GFX/Objects/barrel.png" type="Texture" id=47]
-[ext_resource path="res://GFX/Objects/street-lamp.png" type="Texture" id=48]
+[ext_resource path="res://Scripts/Dialogues/castle-8.gd" type="Script" id=37]
+[ext_resource path="res://Scenes/OldMan.tscn" type="PackedScene" id=38]
+[ext_resource path="res://GFX/Objects/crate.png" type="Texture" id=39]
+[ext_resource path="res://GFX/Objects/crate-stack.png" type="Texture" id=40]
+[ext_resource path="res://GFX/Objects/wagon.png" type="Texture" id=41]
+[ext_resource path="res://GFX/Objects/well.png" type="Texture" id=42]
+[ext_resource path="res://GFX/Objects/tree-3.png" type="Texture" id=43]
+[ext_resource path="res://GFX/Objects/tree-2.png" type="Texture" id=44]
+[ext_resource path="res://GFX/Objects/tree-1.png" type="Texture" id=45]
+[ext_resource path="res://GFX/Objects/house-c.png" type="Texture" id=46]
+[ext_resource path="res://GFX/Objects/house-a.png" type="Texture" id=47]
+[ext_resource path="res://GFX/Objects/barrel.png" type="Texture" id=48]
+[ext_resource path="res://GFX/Objects/street-lamp.png" type="Texture" id=49]
+[ext_resource path="res://Scripts/Dialogues/castle-10.gd" type="Script" id=50]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cena1"
@@ -201,6 +203,61 @@ tracks/10/keys = {
 "args": [  ],
 "method": "shake_camera"
 } ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "cena10"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_dialogue"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "pause_animation"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player/AnimatedSprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player/AnimatedSprite:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -534,6 +591,116 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
+[sub_resource type="Animation" id=39]
+resource_name = "cena8"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_dialogue"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "pause_animation"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player/AnimatedSprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player/AnimatedSprite:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "cena9"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_dialogue"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "pause_animation"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Player/AnimatedSprite:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player/AnimatedSprite:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 103.276, 61.6878 )
 
@@ -628,6 +795,12 @@ font_data = ExtResource( 33 )
 [sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 37.6538, 75.6791 )
 
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 43, 95 )
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 156.038, 94.4349 )
+
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
@@ -637,12 +810,15 @@ __meta__ = {
 
 [node name="AnimationCutScenes" type="AnimationPlayer" parent="."]
 anims/cena1 = SubResource( 1 )
+anims/cena10 = SubResource( 43 )
 anims/cena2 = SubResource( 2 )
 anims/cena3 = SubResource( 3 )
 anims/cena4 = SubResource( 4 )
 anims/cena5 = SubResource( 5 )
 anims/cena6 = SubResource( 6 )
 anims/cena7 = SubResource( 7 )
+anims/cena8 = SubResource( 39 )
+anims/cena9 = SubResource( 40 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -820,7 +996,7 @@ collision_mask = 11
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 17 )]
-position = Vector2( 11399, 503 )
+position = Vector2( 7786, -525 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"
@@ -852,6 +1028,7 @@ position = Vector2( 26.0375, 17.3583 )
 shape = SubResource( 8 )
 
 [node name="Regions" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Forest" parent="Regions" instance=ExtResource( 23 )]
 
@@ -1168,8 +1345,15 @@ shape = SubResource( 38 )
 position = Vector2( 137.49, 42.8138 )
 
 [node name="Barreira2" parent="." instance=ExtResource( 34 )]
-editor/display_folded = true
 position = Vector2( 8274.17, 515.786 )
+
+[node name="Trigger2" parent="Barreira2" instance=ExtResource( 21 )]
+position = Vector2( -133.17, -3.78601 )
+script = ExtResource( 37 )
+cena = "cena8"
+
+[node name="CollisionShape2D" parent="Barreira2/Trigger2" index="1"]
+shape = SubResource( 41 )
 
 [node name="Lever" parent="Barreira2" instance=ExtResource( 36 )]
 position = Vector2( -1822.82, 451.752 )
@@ -1182,9 +1366,8 @@ need_attack = true
 position = Vector2( 6782, -521 )
 need_attack = true
 
-[node name="OldMan" parent="." instance=ExtResource( 37 )]
+[node name="OldMan" parent="." instance=ExtResource( 38 )]
 position = Vector2( 11813, 585 )
-cena = "cena7"
 
 [node name="Objects" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1192,103 +1375,112 @@ position = Vector2( 11702, 634 )
 
 [node name="crate" type="Sprite" parent="Objects"]
 position = Vector2( 467, -52 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="crate-stack" type="Sprite" parent="Objects"]
 position = Vector2( 524, -67 )
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 
 [node name="crate-stack2" type="Sprite" parent="Objects"]
 position = Vector2( 523, -130 )
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 
 [node name="wagon" type="Sprite" parent="Objects"]
 position = Vector2( 397, -66 )
-texture = ExtResource( 40 )
+texture = ExtResource( 41 )
 
 [node name="well" type="Sprite" parent="Objects"]
 position = Vector2( -332, -58 )
-texture = ExtResource( 41 )
+texture = ExtResource( 42 )
 
 [node name="wagon2" type="Sprite" parent="Objects"]
 position = Vector2( -851, -61 )
-texture = ExtResource( 40 )
+texture = ExtResource( 41 )
 
 [node name="wagon3" type="Sprite" parent="Objects"]
 position = Vector2( -738, -64 )
-texture = ExtResource( 40 )
+texture = ExtResource( 41 )
 
 [node name="wagon4" type="Sprite" parent="Objects"]
 position = Vector2( -976, -65 )
-texture = ExtResource( 40 )
+texture = ExtResource( 41 )
 
 [node name="tree-3" type="Sprite" parent="Objects"]
 position = Vector2( -576, -119 )
-texture = ExtResource( 42 )
+texture = ExtResource( 43 )
 
 [node name="tree-2" type="Sprite" parent="Objects"]
 position = Vector2( -1152, -88 )
-texture = ExtResource( 43 )
+texture = ExtResource( 44 )
 
 [node name="tree-1" type="Sprite" parent="Objects"]
 position = Vector2( -413, -90 )
-texture = ExtResource( 44 )
+texture = ExtResource( 45 )
 
 [node name="tree-4" type="Sprite" parent="Objects"]
 position = Vector2( -221, -117 )
-texture = ExtResource( 42 )
+texture = ExtResource( 43 )
 
 [node name="house-c" type="Sprite" parent="Objects"]
 position = Vector2( 231, -126 )
-texture = ExtResource( 45 )
+texture = ExtResource( 46 )
 
 [node name="house-a" type="Sprite" parent="Objects"]
 position = Vector2( -61, -124 )
-texture = ExtResource( 46 )
+texture = ExtResource( 47 )
 
 [node name="house-c2" type="Sprite" parent="Objects"]
 position = Vector2( -1087, -125 )
-texture = ExtResource( 45 )
+texture = ExtResource( 46 )
 
 [node name="barrel" type="Sprite" parent="."]
 position = Vector2( 11061, 591 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="barrel2" type="Sprite" parent="."]
 position = Vector2( 11202, 591 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="barrel3" type="Sprite" parent="."]
 position = Vector2( 12060, 593 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="barrel4" type="Sprite" parent="."]
 position = Vector2( 11565, 592 )
-texture = ExtResource( 47 )
+texture = ExtResource( 48 )
 
 [node name="street-lamp" type="Sprite" parent="."]
 position = Vector2( 10769.5, 553 )
-texture = ExtResource( 48 )
+texture = ExtResource( 49 )
 
 [node name="street-lamp2" type="Sprite" parent="."]
 position = Vector2( 11789.5, 554 )
-texture = ExtResource( 48 )
+texture = ExtResource( 49 )
 
 [node name="street-lamp3" type="Sprite" parent="."]
 position = Vector2( 10383.5, 551 )
-texture = ExtResource( 48 )
+texture = ExtResource( 49 )
 
 [node name="street-lamp4" type="Sprite" parent="."]
 position = Vector2( 11186.5, 549 )
-texture = ExtResource( 48 )
+texture = ExtResource( 49 )
 
 [node name="street-lamp5" type="Sprite" parent="."]
 position = Vector2( 11485.5, 553 )
-texture = ExtResource( 48 )
+texture = ExtResource( 49 )
 
 [node name="street-lamp6" type="Sprite" parent="."]
 position = Vector2( 12043, 552 )
-texture = ExtResource( 48 )
+texture = ExtResource( 49 )
+
+[node name="Trigger2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 7470, -504 )
+script = ExtResource( 50 )
+cena = "cena10"
+
+[node name="CollisionShape2D" parent="Trigger2" index="1"]
+position = Vector2( 32.9622, -7.56506 )
+shape = SubResource( 42 )
 
 [connection signal="animation_finished" from="AnimationCutScenes" to="." method="_on_AnimationCutScenes_animation_finished"]
 [connection signal="input_event" from="Letter" to="Letter" method="_on_Trigger_input_event"]
@@ -1355,6 +1547,10 @@ texture = ExtResource( 48 )
 
 [editable path="Barreira/Trigger"]
 
+[editable path="Barreira2/Trigger2"]
+
 [editable path="Barreira3"]
 
 [editable path="Barreira4"]
+
+[editable path="Trigger2"]
