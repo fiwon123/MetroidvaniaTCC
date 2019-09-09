@@ -64,6 +64,8 @@ func jump():
 			sprite.play("jump")
 		motion.y = stats.jump
 		is_jumping = true
+	if Input.is_action_just_released("jump") and motion.y < 0:
+		motion.y = 0
 
 func move():
 	if not is_attacking and not is_jumping and not is_hurt:

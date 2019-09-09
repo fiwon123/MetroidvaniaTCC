@@ -28,13 +28,16 @@ is_need_interact = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 frames = SubResource( 1 )
-frame = 11
+frame = 5
 playing = true
 
 [node name="Tween" type="Tween" parent="." index="3"]
 
 [node name="ButtonZ" type="Sprite" parent="." index="4"]
-self_modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1.16258, -32.2203 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 11 )
 
+[connection signal="body_entered" from="." to="." method="_on_OldMan_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_OldMan_body_exited"]

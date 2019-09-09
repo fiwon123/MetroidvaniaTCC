@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy-death-3.png-46351ece6ea772a1dde2012e1300a938.stex"
+path="res://.import/tile001.png-52aa4467001bcef1224e630918361a03.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Enemies/enemy-death/enemy-death-3.png"
-dest_files=[ "res://.import/enemy-death-3.png-46351ece6ea772a1dde2012e1300a938.stex" ]
+source_file="res://GFX/Enemies/Final-Boss/Vanish/tile001.png"
+dest_files=[ "res://.import/tile001.png-52aa4467001bcef1224e630918361a03.stex" ]
 
 [params]
 
