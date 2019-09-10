@@ -47,6 +47,9 @@ func update_GUI():
 	Global.GUI.set_hp(stats.hp)
 	
 func fall(delta):
+	
+	motion.y += GRAVITY * delta
+	
 	if is_on_floor():
 		times_jump = max_jump
 		motion.y = 0
@@ -54,8 +57,6 @@ func fall(delta):
 	if is_on_ceiling():
 		motion.y += GRAVITY* 3 * delta
 		is_jumping = false
-
-	motion.y += GRAVITY * delta
 
 func jump():
 	if Input.is_action_just_pressed("jump") and times_jump > 0:
