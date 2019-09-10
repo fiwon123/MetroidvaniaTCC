@@ -17,21 +17,21 @@ forest-3-2,,Herói: Preciso achar uma outra maneira de entrar.
 subsolo-4-1,,Herói: Preciso acabar com esse monstro utilizando minha espada.
 subsolo-5-1,,Herói: Essas plataformas estão muito altas.
 subsolo-6-1,,Herói: Você sabe de algo relacionado com a voz de antes?
-subsolo-6-2,,"Monstro: Desculpe, mas não compreendo o que está falando."
+subsolo-6-2,,"Monstro: Desculpe, mas não compreendo."
 subsolo-6-3,,Monstro: Sou apenas o guardião da parte mais profunda do castelo.
 subsolo-6-4,,"Monstro: E agora que você está aqui, está na hora de impedir sua jornada."
-castle-7-1,,Herói: Finalmente consegue entrar no castelo.
+castle-7-1,,Herói: Finalmente consegui entrar no castelo.
 castle-7-2,,Herói: Agora preciso descobrir onde o monstro se encontra.
 castle-8-1,,"Herói: Outra passagem bloqueada, preciso achar uma maneira de passar."
-vila-9-1,,"Herói - “Poderia me ajudar, gostaria de saber se existe uma forma de atravessar portas bloqueadas”."
-vila-9-2,,"Pessoa - “Do que está falando meu jovem, que porta bloqueada seria essa.”"
-vila-9-3,,"Herói - “Desculpa, não me apresentei. Sou um herói que está a trabalho do rei para derrotar um monstro que está no castelo”"
-vila-9-4,,"Pessoa - “Nossa, você deve ser uma pessoa importante. Fale-me mais sobre seu objetivo e vejo no que posso ajudá-lo”"
-vila-9-5,,"Herói - “Então, não sei muitos dos detalhes, pois perdi um pouco das minhas memórias”"
-vila-9-6,,"Pessoa- “Deixe-me ver, talvez eu consiga visualizar algo se eu usar minha magia”"
-vila-9-7,,"Pessoa - “Nossa, você parece que acabou caindo em uma caverna e muito dos seus companheiros morreram. Parece que alguém que estava com você acabou sendo levada para o castelo.”"
-vila-9-8,,"Herói - “Sim, eu ouvi um grito lá na floresta. Você conseguiria ajudar?”"
-vila-9-9,,"Pessoa - “Eu posso colocar uma magia na sua espada, vejo que a porta que está falando possui um encantamento.”"
-vila-9-10,,Herói - “Muito obrigado.”
-boss-10-1,,Herói - “Vejo que foi você que sequestrou minha companheira. Agora me lembrei dos meus companheiros.”
-boss-10-2,,Monstro - “Oh vejo que conseguiu chegar até aqui. Mas agora será o seu fim.”
+vila-9-1,,"Herói: Poderia me ajudar, gostaria de saber se existe uma forma de atravessar portas bloqueadas."
+vila-9-2,,"Viajante: Do que está falando meu jovem, que porta bloqueada seria essa."
+vila-9-3,,"Herói: Desculpa, não me apresentei. Sou um herói que está a trabalho do rei para derrotar um monstro."
+vila-9-4,,"Viajante: Nossa, você deve ser uma pessoa importante. Fale-me mais sobre seu objetivo e vejo no que posso ajudá-lo."
+vila-9-5,,"Herói: Então, não sei muitos dos detalhes, pois perdi um pouco das minhas memórias."
+vila-9-6,,"Viajante: Deixe-me ver, talvez eu consiga visualizar algo com minha magia."
+vila-9-7,,"Viajante: Nossa, você parece que acabou caindo em uma caverna e muito dos seus companheiros morreram. E alguém que estava com você acabou sendo levada para o castelo.”"
+vila-9-8,,"Herói : Sim, eu ouvi um grito lá na floresta. Você conseguiria ajudar?"
+vila-9-9,,"Viajante: Eu posso colocar uma magia na sua espada, vejo que a porta que está falando possui um encantamento."
+vila-9-10,,Herói: Muito obrigado.
+boss-10-1,,Herói: Vejo que foi você que sequestrou minha companheira. Agora me lembrei dos meus companheiros.
+boss-10-2,,"Monstro: Oh, vejo que conseguiu chegar até aqui. Mas agora será o seu fim."
