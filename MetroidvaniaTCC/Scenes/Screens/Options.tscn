@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Options.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/HARVEST_.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://GFX/Fonts/joystix monospace.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -21,10 +21,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -112.0
-margin_top = -41.0
-margin_right = 112.0
-margin_bottom = 41.0
+margin_left = -210.0
+margin_top = -43.5
+margin_right = 210.0
+margin_bottom = 43.5
 custom_fonts/font = SubResource( 1 )
 text = "Options"
 
@@ -35,5 +35,6 @@ margin_right = 30.6616
 margin_bottom = 42.1607
 custom_fonts/font = SubResource( 2 )
 text = "Go Back"
+flat = true
 
 [connection signal="pressed" from="ButtonGoBack" to="." method="_on_ButtonGoBack_pressed"]

@@ -3,6 +3,13 @@ extends StaticBody2D
 var is_disappear = false
 export(bool) var need_attack = false 
 
+func _ready():
+	var tween = get_node("Tween")
+	tween.interpolate_property($Sprite, "modulate",
+        $Sprite.modulate, Color(1, 1, 1, 0), 0.5,
+        Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
+
 func start_disappear():
 	$Area2D.queue_free()
 	$Area2D2.queue_free()

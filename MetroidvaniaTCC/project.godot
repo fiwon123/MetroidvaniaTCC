@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="MetroidvaniaTCC"
 run/main_scene="res://Scenes/Screens/MainMenu.tscn"
-config/icon="res://GFX/d.png"
+config/icon="res://GFX/Logo.png"
 
 [autoload]
 
@@ -81,7 +81,7 @@ dialogue={
 
 [locale]
 
-translations=PoolStringArray( "res://Languages/languages.en.translation", "res://Languages/languages.pt_BR.translation" )
+translations=PoolStringArray( "res://GFX/Languages/languages.en.translation", "res://GFX/Languages/languages.pt_BR.translation" )
 
 [rendering]
 
@@ -91,4 +91,3 @@ quality/intended_usage/framebuffer_allocation.mobile=0
 quality/2d/use_pixel_snap=true
 quality/filters/use_nearest_mipmap_filter=true
 quality/subsurface_scattering/quality=2
-environment/default_environment="res://default_env.tres"
