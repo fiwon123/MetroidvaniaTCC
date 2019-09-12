@@ -5,6 +5,7 @@ var GUI
 var Camera2D
 var game
 var player
+var boss1
 
 #Scenes
 var MAIN_MENU = "res://Scenes/Screens/MainMenu.tscn"

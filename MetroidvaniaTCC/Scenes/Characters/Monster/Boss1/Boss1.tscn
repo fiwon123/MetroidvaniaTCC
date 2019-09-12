@@ -1,0 +1,199 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Scenes/Characters/Monster/Monster.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Boss1.gd" type="Script" id=2]
+[ext_resource path="res://GFX/nightmare/idle/tile000.png" type="Texture" id=3]
+[ext_resource path="res://GFX/nightmare/idle/tile001.png" type="Texture" id=4]
+[ext_resource path="res://GFX/nightmare/idle/tile002.png" type="Texture" id=5]
+[ext_resource path="res://GFX/nightmare/idle/tile003.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=11]
+[ext_resource path="res://GFX/nightmare/run/tile000.png" type="Texture" id=12]
+[ext_resource path="res://GFX/nightmare/run/tile001.png" type="Texture" id=13]
+[ext_resource path="res://GFX/nightmare/run/tile002.png" type="Texture" id=14]
+[ext_resource path="res://GFX/nightmare/run/tile003.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/StateMachine/State/Boss1/idle_boss1.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/StateMachine/State/Boss1/run_boss1.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/StateMachine/State/Boss1/hit_boss1.gd" type="Script" id=18]
+[ext_resource path="res://Scripts/StateMachine/State/Boss1/die_boss1.gd" type="Script" id=19]
+[ext_resource path="res://GFX/light/light.png" type="Texture" id=20]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "die",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 17.9539, 7.93672 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 26.9229, 20.3393 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 33.9463, 29.3016 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "appear"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.25, 1.03527 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.12549 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.01, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D2:energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.01, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D3:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.01, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2D4:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.01, 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "hit"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.368627, 0.368627, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Boss1" index="0" instance=ExtResource( 1 )]
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" parent="." index="0"]
+modulate = Color( 1, 1, 1, 0.12549 )
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+position = Vector2( -29.1076, -1.7976 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" parent="." index="3"]
+position = Vector2( -7.98048, 28.1518 )
+shape = SubResource( 5 )
+
+[node name="Stats" parent="." index="4"]
+speed = 200
+max_hp = 400
+hp = 400
+
+[node name="idle" type="Node" parent="StateMachine" index="0"]
+script = ExtResource( 16 )
+
+[node name="run" type="Node" parent="StateMachine" index="1"]
+script = ExtResource( 17 )
+
+[node name="hit" type="Node" parent="StateMachine" index="2"]
+script = ExtResource( 18 )
+
+[node name="die" type="Node" parent="StateMachine" index="3"]
+script = ExtResource( 19 )
+
+[node name="DetectBody" parent="." index="6"]
+position = Vector2( -7.41563, 4.89116 )
+
+[node name="CollisionShape2D2" parent="DetectBody" index="0"]
+position = Vector2( -0.453896, 15.4266 )
+shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+anims/appear = SubResource( 7 )
+anims/hit = SubResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="." index="8"]
+position = Vector2( 39.7795, 12.4464 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 20 )
+energy = 0.01
+
+[node name="Light2D2" type="Light2D" parent="." index="9"]
+position = Vector2( -28.2316, -19.1451 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 20 )
+energy = 0.01
+
+[node name="Light2D3" type="Light2D" parent="." index="10"]
+position = Vector2( -25.8533, 46.733 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+energy = 0.01
+
+[node name="Light2D4" type="Light2D" parent="." index="11"]
+position = Vector2( 7.68033, 47.9221 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+energy = 0.01
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="area_entered" from="DetectBody" to="." method="_on_DetectBody_area_entered"]

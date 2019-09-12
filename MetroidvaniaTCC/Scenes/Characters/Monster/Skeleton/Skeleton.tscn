@@ -3,18 +3,18 @@
 [ext_resource path="res://Scenes/Characters/Monster/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Skeleton.gd" type="Script" id=2]
 [ext_resource path="res://GFX/Enemies/Skeleton/skeleton-1.png" type="Texture" id=3]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=4]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=5]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=7]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=8]
-[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-2.png" type="Texture" id=9]
-[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-3.png" type="Texture" id=10]
-[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-4.png" type="Texture" id=11]
-[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-5.png" type="Texture" id=12]
-[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-6.png" type="Texture" id=13]
-[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-7.png" type="Texture" id=14]
-[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-8.png" type="Texture" id=15]
+[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-2.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-3.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-4.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-5.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-6.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-7.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Enemies/Skeleton/skeleton-8.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/StateMachine/State/Skeleton/idle_skeleton.gd" type="Script" id=16]
 [ext_resource path="res://Scripts/StateMachine/State/Skeleton/move_skeleton.gd" type="Script" id=17]
 [ext_resource path="res://Scripts/StateMachine/State/Skeleton/hit_skeleton.gd" type="Script" id=18]
@@ -27,19 +27,19 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "hit",
+"name": "move",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "die",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "move",
+"name": "hit",
 "speed": 5.0
 } ]
 
