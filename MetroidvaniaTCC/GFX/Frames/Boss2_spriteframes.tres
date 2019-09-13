@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=2]
+[gd_resource type="SpriteFrames" load_steps=30 format=2]
 
 [ext_resource path="res://GFX/Enemies/Final-Boss/Idle/tile000.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Enemies/Final-Boss/Idle/tile001.png" type="Texture" id=2]
@@ -7,23 +7,28 @@
 [ext_resource path="res://GFX/Enemies/Final-Boss/Idle/tile004.png" type="Texture" id=5]
 [ext_resource path="res://GFX/Enemies/Final-Boss/Idle/tile005.png" type="Texture" id=6]
 [ext_resource path="res://GFX/Enemies/Final-Boss/Idle/tile006.png" type="Texture" id=7]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile000.png" type="Texture" id=8]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile001.png" type="Texture" id=9]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile002.png" type="Texture" id=10]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile003.png" type="Texture" id=11]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile004.png" type="Texture" id=12]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile005.png" type="Texture" id=13]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile006.png" type="Texture" id=14]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile000.png" type="Texture" id=15]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile001.png" type="Texture" id=16]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile002.png" type="Texture" id=17]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile003.png" type="Texture" id=18]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile004.png" type="Texture" id=19]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile005.png" type="Texture" id=20]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile000.png" type="Texture" id=21]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile001.png" type="Texture" id=22]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile002.png" type="Texture" id=23]
-[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile003.png" type="Texture" id=24]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile000.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile001.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile002.png" type="Texture" id=15]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile003.png" type="Texture" id=16]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile004.png" type="Texture" id=17]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile005.png" type="Texture" id=18]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Vanish/tile006.png" type="Texture" id=19]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile000.png" type="Texture" id=20]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile001.png" type="Texture" id=21]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile002.png" type="Texture" id=22]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile003.png" type="Texture" id=23]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile004.png" type="Texture" id=24]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Appear/tile005.png" type="Texture" id=25]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile002.png" type="Texture" id=26]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile003.png" type="Texture" id=27]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile000.png" type="Texture" id=28]
+[ext_resource path="res://GFX/Enemies/Final-Boss/Shriek/tile001.png" type="Texture" id=29]
 
 [resource]
 animations = [ {
@@ -32,19 +37,29 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
-"loop": true,
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "die",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": false,
 "name": "vanish",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": true,
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
+"loop": false,
 "name": "appear",
-"speed": 5.0
+"speed": 7.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
-"name": "attack",
+"name": "attacking",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": false,
+"name": "prepare_attack",
 "speed": 5.0
 } ]
 

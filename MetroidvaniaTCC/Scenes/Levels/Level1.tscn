@@ -258,6 +258,20 @@ tracks/3/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/4/type = "method"
+tracks/4/path = NodePath("Boss2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_battle"
+} ]
+}
 
 [sub_resource type="Animation" id=3]
 length = 2.0
@@ -1045,7 +1059,7 @@ need_attack = true
 
 [node name="Sprite" parent="Barreiras/Barreira3" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 0
+frame = 6
 
 [node name="Barreira4" parent="Barreiras" instance=ExtResource( 21 )]
 position = Vector2( 6761, -523 )
@@ -1053,7 +1067,7 @@ need_attack = true
 
 [node name="Sprite" parent="Barreiras/Barreira4" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 0
+frame = 6
 
 [node name="ObjectsVila" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1164,7 +1178,7 @@ position = Vector2( 11813, 585 )
 
 [node name="Player" parent="." instance=ExtResource( 38 )]
 editor/display_folded = true
-position = Vector2( 571, 1694 )
+position = Vector2( 7682.36, -498.085 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"
@@ -1229,7 +1243,6 @@ shape = SubResource( 17 )
 [node name="SubForest" parent="Regions" instance=ExtResource( 41 )]
 
 [node name="Part" parent="Regions/SubForest" instance=ExtResource( 42 )]
-editor/display_folded = true
 position = Vector2( 1204.49, 801.527 )
 
 [node name="CollisionShape2D" parent="Regions/SubForest/Part" index="0"]
