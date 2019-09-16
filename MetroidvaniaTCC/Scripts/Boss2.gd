@@ -15,7 +15,7 @@ func _on_AnimatedSprite_animation_finished():
 	if (sprite.animation == "die"):
 		queue_free()
 	elif (sprite.animation == "appear"):
-		change_state("idle")
+		change_state("move")
 	elif (sprite.animation == "prepare_attack"):
 		change_state("attacking")
 	elif (sprite.animation == "vanish"):

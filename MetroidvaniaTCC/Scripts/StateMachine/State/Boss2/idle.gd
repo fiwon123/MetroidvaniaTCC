@@ -8,6 +8,6 @@ func update(body, delta):
 	body.sprite.play("idle")
 	
 	time += delta
-	if time >= 0.5:
+	if time >= 1:
 		time = 0
 		return "move"
