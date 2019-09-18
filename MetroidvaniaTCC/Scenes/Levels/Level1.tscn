@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=2]
@@ -42,15 +42,18 @@
 [ext_resource path="res://Scripts/Regions.gd" type="Script" id=40]
 [ext_resource path="res://Scenes/Map/Region.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Scenes/Map/Part.tscn" type="PackedScene" id=42]
-[ext_resource path="res://Scenes/Characters/Monster/Skeleton/Skeleton.tscn" type="PackedScene" id=43]
-[ext_resource path="res://Scripts/Dialogues/forest-1.gd" type="Script" id=44]
-[ext_resource path="res://Scripts/Dialogues/subsolo-4.gd" type="Script" id=45]
-[ext_resource path="res://Scripts/Dialogues/subsolo-6.gd" type="Script" id=46]
-[ext_resource path="res://Scripts/Dialogues/subsolo-5.gd" type="Script" id=47]
-[ext_resource path="res://Scripts/Dialogues/castle-7.gd" type="Script" id=48]
-[ext_resource path="res://Scripts/Dialogues/castle-10.gd" type="Script" id=49]
-[ext_resource path="res://Scenes/Characters/Monster/Boss1/Boss1.tscn" type="PackedScene" id=50]
-[ext_resource path="res://Scenes/Characters/Monster/Boss2/Boss2.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Scenes/Characters/Monster/HellCat/HellCat.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Scenes/Characters/Monster/Skeleton/Skeleton.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Scenes/Characters/Monster/Skull/Skull.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Scenes/Navigation2D/Navigation2D.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Scripts/Dialogues/forest-1.gd" type="Script" id=47]
+[ext_resource path="res://Scripts/Dialogues/subsolo-4.gd" type="Script" id=48]
+[ext_resource path="res://Scripts/Dialogues/subsolo-6.gd" type="Script" id=49]
+[ext_resource path="res://Scripts/Dialogues/subsolo-5.gd" type="Script" id=50]
+[ext_resource path="res://Scripts/Dialogues/castle-7.gd" type="Script" id=51]
+[ext_resource path="res://Scripts/Dialogues/castle-10.gd" type="Script" id=52]
+[ext_resource path="res://Scenes/Characters/Monster/Boss1/Boss1.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Scenes/Characters/Monster/Boss2/Boss2.tscn" type="PackedScene" id=54]
 
 [sub_resource type="Animation" id=1]
 length = 7.0
@@ -780,6 +783,11 @@ extents = Vector2( 422.703, 206.289 )
 [sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 516, 220 )
 
+[sub_resource type="NavigationPolygon" id=43]
+vertices = PoolVector2Array( 446, -158, 457, 68, -436, 72, -424, -159 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -424, -159, -436, 72, 457, 68, 446, -158 ) ]
+
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 493, 200 )
 
@@ -1057,7 +1065,7 @@ need_attack = true
 
 [node name="Sprite" parent="Barreiras/Barreira3" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 4
+frame = 0
 
 [node name="Barreira4" parent="Barreiras" instance=ExtResource( 21 )]
 position = Vector2( 6761, -523 )
@@ -1065,7 +1073,7 @@ need_attack = true
 
 [node name="Sprite" parent="Barreiras/Barreira4" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 4
+frame = 0
 
 [node name="ObjectsVila" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1176,11 +1184,11 @@ position = Vector2( 11813, 585 )
 
 [node name="Player" parent="." instance=ExtResource( 38 )]
 editor/display_folded = true
-position = Vector2( 333, 416 )
+position = Vector2( 5486, 530 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"
-frame = 1
+frame = 2
 
 [node name="Stats" parent="Player" index="3"]
 max_hp = 50
@@ -1211,11 +1219,13 @@ scale = Vector2( 1.02002, 1 )
 shape = SubResource( 13 )
 
 [node name="Part2" parent="Regions/Forest" instance=ExtResource( 42 )]
-editor/display_folded = true
 position = Vector2( 1176.9, 345.358 )
 
 [node name="CollisionShape2D" parent="Regions/Forest/Part2" index="0"]
 shape = SubResource( 14 )
+
+[node name="HellCat" parent="Regions/Forest/Part2/Enemies" index="0" instance=ExtResource( 43 )]
+position = Vector2( 8.09998, 50.642 )
 
 [node name="Part5" parent="Regions/Forest" instance=ExtResource( 42 )]
 position = Vector2( 2916, 266 )
@@ -1223,16 +1233,16 @@ position = Vector2( 2916, 266 )
 [node name="CollisionShape2D" parent="Regions/Forest/Part5" index="0"]
 shape = SubResource( 15 )
 
-[node name="Skeleton" parent="Regions/Forest/Part5/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/Forest/Part5/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( -824, 155 )
 
-[node name="Skeleton2" parent="Regions/Forest/Part5/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/Forest/Part5/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( -325, 155 )
 
-[node name="Skeleton3" parent="Regions/Forest/Part5/Enemies" index="2" instance=ExtResource( 43 )]
+[node name="Skeleton3" parent="Regions/Forest/Part5/Enemies" index="2" instance=ExtResource( 44 )]
 position = Vector2( 176, 156 )
 
-[node name="Skeleton4" parent="Regions/Forest/Part5/Enemies" index="3" instance=ExtResource( 43 )]
+[node name="Skeleton4" parent="Regions/Forest/Part5/Enemies" index="3" instance=ExtResource( 44 )]
 position = Vector2( 622, 155 )
 
 [node name="Part3" parent="Regions/Forest" instance=ExtResource( 42 )]
@@ -1257,10 +1267,10 @@ position = Vector2( 1204.49, 801.527 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part" index="0"]
 shape = SubResource( 18 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( 37.4703, -42.4652 )
 
-[node name="Skeleton2" parent="Regions/SubForest/Part/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/SubForest/Part/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( 266.251, -10.9526 )
 
 [node name="Part6" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1269,7 +1279,7 @@ position = Vector2( 1262.16, 1068.84 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part6" index="0"]
 shape = SubResource( 19 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part6/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part6/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( 273.84, 41.16 )
 
 [node name="Part9" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1278,7 +1288,7 @@ position = Vector2( 2116.59, 1075.87 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part9" index="0"]
 shape = SubResource( 20 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part9/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part9/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( -65.5901, 38.13 )
 
 [node name="Part10" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1294,10 +1304,10 @@ position = Vector2( 2881.36, 1462.65 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part11" index="0"]
 shape = SubResource( 22 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part11/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part11/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( -317.36, 98.35 )
 
-[node name="Skeleton2" parent="Regions/SubForest/Part11/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/SubForest/Part11/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( 136.64, -161.65 )
 
 [node name="Part2" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1306,10 +1316,10 @@ position = Vector2( 2108.56, 780.065 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part2" index="0"]
 shape = SubResource( 23 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part2/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part2/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( 175.44, -71.065 )
 
-[node name="Skeleton2" parent="Regions/SubForest/Part2/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/SubForest/Part2/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( -311.56, 153.935 )
 
 [node name="Part3" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1318,7 +1328,7 @@ position = Vector2( 390.135, 821.605 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part3" index="0"]
 shape = SubResource( 24 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part3/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part3/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( 121.865, 147.395 )
 
 [node name="Part4" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1327,7 +1337,7 @@ position = Vector2( 367.067, 1281.57 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part4" index="0"]
 shape = SubResource( 25 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part4/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part4/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( 67.933, 84.4301 )
 
 [node name="Part7" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1342,10 +1352,10 @@ position = Vector2( 1265, 1738 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part8" index="0"]
 shape = SubResource( 27 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part8/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part8/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( -140, 44 )
 
-[node name="Skeleton2" parent="Regions/SubForest/Part8/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/SubForest/Part8/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( 252, 47 )
 
 [node name="Part12" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1354,10 +1364,10 @@ position = Vector2( 1994.68, 1538.71 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part12" index="0"]
 shape = SubResource( 28 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part12/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part12/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( 13.3199, 51.29 )
 
-[node name="Skeleton2" parent="Regions/SubForest/Part12/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/SubForest/Part12/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( -204.68, -121.71 )
 
 [node name="Part5" parent="Regions/SubForest" instance=ExtResource( 42 )]
@@ -1366,10 +1376,10 @@ position = Vector2( 1274.84, 1364.78 )
 [node name="CollisionShape2D" parent="Regions/SubForest/Part5" index="0"]
 shape = SubResource( 29 )
 
-[node name="Skeleton" parent="Regions/SubForest/Part5/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/SubForest/Part5/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( 169.16, 160.22 )
 
-[node name="Skeleton2" parent="Regions/SubForest/Part5/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/SubForest/Part5/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( -328.84, 184.22 )
 
 [node name="Castle" parent="Regions" instance=ExtResource( 41 )]
@@ -1381,11 +1391,25 @@ position = Vector2( 4648, 842 )
 position = Vector2( 4639, 432 )
 
 [node name="Part3" parent="Regions/Castle" instance=ExtResource( 42 )]
-editor/display_folded = true
-position = Vector2( 5661, 416 )
+position = Vector2( 5661, 415 )
 
 [node name="CollisionShape2D" parent="Regions/Castle/Part3" index="0"]
 shape = SubResource( 30 )
+
+[node name="Skull" parent="Regions/Castle/Part3/Enemies" index="0" instance=ExtResource( 45 )]
+position = Vector2( 253, 40 )
+
+[node name="Navigation2D" parent="Regions/Castle/Part3/Enemies" index="1" instance=ExtResource( 46 )]
+position = Vector2( 7, 84 )
+
+[node name="Destinations" parent="Regions/Castle/Part3/Enemies/Navigation2D" index="0"]
+navpoly = SubResource( 43 )
+
+[node name="Position2D7" type="Position2D" parent="Regions/Castle/Part3/Enemies/Navigation2D/Destinations" index="0"]
+position = Vector2( 70, -73 )
+
+[node name="Position2D8" type="Position2D" parent="Regions/Castle/Part3/Enemies/Navigation2D/Destinations" index="1"]
+position = Vector2( 162, 19 )
 
 [node name="Part4" parent="Regions/Castle" instance=ExtResource( 42 )]
 editor/display_folded = true
@@ -1443,19 +1467,19 @@ shape = SubResource( 36 )
 [node name="Part" parent="Regions/Forest2" instance=ExtResource( 42 )]
 position = Vector2( 8736, 432 )
 
-[node name="Skeleton" parent="Regions/Forest2/Part/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/Forest2/Part/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( -104, 138 )
 
-[node name="Skeleton2" parent="Regions/Forest2/Part/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/Forest2/Part/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( 270, 134 )
 
 [node name="Part2" parent="Regions/Forest2" instance=ExtResource( 42 )]
 position = Vector2( 9745, 432 )
 
-[node name="Skeleton" parent="Regions/Forest2/Part2/Enemies" index="0" instance=ExtResource( 43 )]
+[node name="Skeleton" parent="Regions/Forest2/Part2/Enemies" index="0" instance=ExtResource( 44 )]
 position = Vector2( -218, 135 )
 
-[node name="Skeleton2" parent="Regions/Forest2/Part2/Enemies" index="1" instance=ExtResource( 43 )]
+[node name="Skeleton2" parent="Regions/Forest2/Part2/Enemies" index="1" instance=ExtResource( 44 )]
 position = Vector2( 224, 136 )
 
 [node name="Vila" parent="Regions" instance=ExtResource( 41 )]
@@ -1472,7 +1496,7 @@ position = Vector2( 11767, 430 )
 [node name="TriggerBegin" parent="Triggers" instance=ExtResource( 22 )]
 editor/display_folded = true
 position = Vector2( 308.287, 370.574 )
-script = ExtResource( 44 )
+script = ExtResource( 47 )
 
 [node name="CollisionShape2D" parent="Triggers/TriggerBegin" index="1"]
 position = Vector2( 26.0375, 17.3583 )
@@ -1481,7 +1505,7 @@ shape = SubResource( 37 )
 [node name="TriggerSubsolo" parent="Triggers" instance=ExtResource( 22 )]
 editor/display_folded = true
 position = Vector2( 1523, 700 )
-script = ExtResource( 45 )
+script = ExtResource( 48 )
 cena = "cena4"
 
 [node name="CollisionShape2D" parent="Triggers/TriggerSubsolo" index="1"]
@@ -1489,7 +1513,7 @@ shape = SubResource( 38 )
 
 [node name="TriggerBoss1" parent="Triggers" instance=ExtResource( 22 )]
 position = Vector2( 324, 1717 )
-script = ExtResource( 46 )
+script = ExtResource( 49 )
 cena = "cena6"
 
 [node name="CollisionShape2D" parent="Triggers/TriggerBoss1" index="1"]
@@ -1497,7 +1521,7 @@ shape = SubResource( 39 )
 
 [node name="TriggerJump" parent="Triggers" instance=ExtResource( 22 )]
 position = Vector2( 2757, 1126 )
-script = ExtResource( 47 )
+script = ExtResource( 50 )
 cena = "cena5"
 
 [node name="CollisionShape2D" parent="Triggers/TriggerJump" index="1"]
@@ -1505,7 +1529,7 @@ shape = SubResource( 40 )
 
 [node name="TriggerCastle" parent="Triggers" instance=ExtResource( 22 )]
 position = Vector2( 4180, 787 )
-script = ExtResource( 48 )
+script = ExtResource( 51 )
 cena = "cena7"
 
 [node name="CollisionShape2D" parent="Triggers/TriggerCastle" index="1"]
@@ -1513,17 +1537,17 @@ shape = SubResource( 41 )
 
 [node name="TriggerBoss2" parent="Triggers" instance=ExtResource( 22 )]
 position = Vector2( 7470, -504 )
-script = ExtResource( 49 )
+script = ExtResource( 52 )
 cena = "cena10"
 
 [node name="CollisionShape2D" parent="Triggers/TriggerBoss2" index="1"]
 position = Vector2( 9, -97 )
 shape = SubResource( 42 )
 
-[node name="Boss1" parent="." instance=ExtResource( 50 )]
+[node name="Boss1" parent="." instance=ExtResource( 53 )]
 position = Vector2( 503, 1760 )
 
-[node name="Boss2" parent="." instance=ExtResource( 51 )]
+[node name="Boss2" parent="." instance=ExtResource( 54 )]
 position = Vector2( 7563, -570 )
 
 [connection signal="animation_finished" from="AnimationCutScenes" to="." method="_on_AnimationCutScenes_animation_finished"]
@@ -1574,6 +1598,8 @@ position = Vector2( 7563, -570 )
 [editable path="Regions/SubForest/Part5"]
 
 [editable path="Regions/Castle/Part3"]
+
+[editable path="Regions/Castle/Part3/Enemies/Navigation2D"]
 
 [editable path="Regions/Castle/Part4"]
 

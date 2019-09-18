@@ -13,3 +13,7 @@ var OPTIONS = "res://Scenes/Screens/Options.tscn"
 var CREDITS = "res://Scenes/Screens/Credits.tscn"
 var SAVES = "res://Scenes/Screens/Saves.tscn"
 var GAME = "res://Scenes/Levels/Level1.tscn"
+
+#Navigatiojn
+var navigation
+var destinations

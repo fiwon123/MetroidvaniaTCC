@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Characters/Monster/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Boss2.gd" type="Script" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://Scripts/StateMachine/State/Boss2/vanish.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/StateMachine/State/Boss2/hit.gd" type="Script" id=10]
 [ext_resource path="res://Scripts/StateMachine/State/Boss2/die.gd" type="Script" id=11]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12.5053, 21.4879 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13.8583, 22.752 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "hit"
@@ -34,7 +40,9 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" parent="." index="0"]
 scale = Vector2( 2, 2 )
 frames = ExtResource( 3 )
-frame = 5
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource( 2 )
 
 [node name="Stats" parent="." index="3"]
 speed = 135
@@ -65,9 +73,12 @@ script = ExtResource( 10 )
 [node name="die" type="Node" parent="StateMachine" index="7"]
 script = ExtResource( 11 )
 
+[node name="CollisionShape2D2" parent="DetectBody" index="0"]
+shape = SubResource( 3 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
 anims/hit = SubResource( 1 )
 
-[connection signal="animation_finished" from="AnimatedSprite" to="StateMachine/appear" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite" to="StateMachine/appear" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="DetectBody" to="." method="_on_DetectBody_area_entered"]
