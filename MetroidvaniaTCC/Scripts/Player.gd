@@ -18,6 +18,8 @@ const sword_sound = ["res://SFX/Sword-1.wav"]
 
 func _ready():
 	Global.player = self
+	if Global.save_position != null:
+		global_position = Global.save_position
 
 func _process(delta):
 	motion.x = 0
@@ -102,8 +104,11 @@ func _on_AnimatedSprite_animation_finished():
 		is_attacking = false
 		$AnimatedSprite/DetectAttack/CollisionShape2D.disabled = true
 		sprite.play("jump")
-	if sprite.animation == "hurt":
+	elif sprite.animation == "hurt":
 		is_hurt = false
+	elif sprite.animation == "die":
+		get_tree().reload_current_scene()
+	
 	
 
 

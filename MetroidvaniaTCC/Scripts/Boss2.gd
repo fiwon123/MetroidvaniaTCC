@@ -14,6 +14,7 @@ func _on_DetectBody_area_entered(area):
 func _on_AnimatedSprite_animation_finished():
 	if (sprite.animation == "die"):
 		queue_free()
+		get_tree().change_scene(Global.FINAL)
 	elif (sprite.animation == "appear"):
 		change_state("move")
 	elif (sprite.animation == "prepare_attack"):
