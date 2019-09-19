@@ -724,6 +724,20 @@ tracks/3/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/4/type = "method"
+tracks/4/path = NodePath("GUI")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "show_message"
+} ]
+}
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 40, 95.9562 )
@@ -1099,7 +1113,7 @@ need_attack = true
 
 [node name="Sprite" parent="Barreiras/Barreira3" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 5
+frame = 0
 
 [node name="Barreira4" parent="Barreiras" instance=ExtResource( 21 )]
 position = Vector2( 6761, -523 )
@@ -1107,7 +1121,7 @@ need_attack = true
 
 [node name="Sprite" parent="Barreiras/Barreira4" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 5
+frame = 0
 
 [node name="ObjectsVila" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1218,11 +1232,11 @@ position = Vector2( 11813, 585 )
 
 [node name="Player" parent="." instance=ExtResource( 38 )]
 editor/display_folded = true
-position = Vector2( 871, 369 )
+position = Vector2( 11732, 573 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"
-frame = 0
+frame = 1
 
 [node name="Stats" parent="Player" index="3"]
 max_hp = 50

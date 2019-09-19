@@ -10,3 +10,6 @@ func _process(delta):
 
 func set_hp(hp):
 	hp_bar.value = hp
+	
+func show_message():
+	$AnimationPlayer.play("show_message")
