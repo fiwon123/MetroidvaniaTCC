@@ -6,15 +6,15 @@
 [ext_resource path="res://GFX/nightmare/idle/tile001.png" type="Texture" id=4]
 [ext_resource path="res://GFX/nightmare/idle/tile002.png" type="Texture" id=5]
 [ext_resource path="res://GFX/nightmare/idle/tile003.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=7]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=8]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=9]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=10]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=11]
-[ext_resource path="res://GFX/nightmare/run/tile000.png" type="Texture" id=12]
-[ext_resource path="res://GFX/nightmare/run/tile001.png" type="Texture" id=13]
-[ext_resource path="res://GFX/nightmare/run/tile002.png" type="Texture" id=14]
-[ext_resource path="res://GFX/nightmare/run/tile003.png" type="Texture" id=15]
+[ext_resource path="res://GFX/nightmare/run/tile000.png" type="Texture" id=7]
+[ext_resource path="res://GFX/nightmare/run/tile001.png" type="Texture" id=8]
+[ext_resource path="res://GFX/nightmare/run/tile002.png" type="Texture" id=9]
+[ext_resource path="res://GFX/nightmare/run/tile003.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/StateMachine/State/Boss1/idle_boss1.gd" type="Script" id=16]
 [ext_resource path="res://Scripts/StateMachine/State/Boss1/run_boss1.gd" type="Script" id=17]
 [ext_resource path="res://Scripts/StateMachine/State/Boss1/hit_boss1.gd" type="Script" id=18]
@@ -28,27 +28,27 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "die",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "run",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "die",
+"speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 17.9539, 7.93672 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 26.9229, 20.3393 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 33.9463, 29.3016 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "appear"
 length = 2.0
 tracks/0/type = "value"
@@ -112,8 +112,7 @@ tracks/4/keys = {
 "values": [ 0.01, 1.0 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "hit"
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -128,21 +127,19 @@ tracks/0/keys = {
 }
 
 [node name="Boss1" instance=ExtResource( 1 )]
-collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 modulate = Color( 1, 1, 1, 0.12549 )
 frames = SubResource( 1 )
-frame = 3
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
 position = Vector2( -29.1076, -1.7976 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="3"]
 position = Vector2( -7.98048, 28.1518 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Stats" parent="." index="4"]
 speed = 200
@@ -166,11 +163,11 @@ position = Vector2( -7.41563, 4.89116 )
 
 [node name="CollisionShape2D2" parent="DetectBody" index="0"]
 position = Vector2( -0.453896, 15.4266 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
-anims/appear = SubResource( 7 )
-anims/hit = SubResource( 4 )
+anims/appear = SubResource( 5 )
+anims/hit = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="." index="8"]
 position = Vector2( 39.7795, 12.4464 )

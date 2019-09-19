@@ -3,30 +3,27 @@ extends "res://Scripts/Monster.gd"
 onready var life = load("res://Scenes/Item/Usable/Life.tscn")
 
 onready var animation = $AnimationPlayer
+onready var animationHit = $AnimationPlayer2
 onready var detect = $CollisionShape2D
 
-var is_left = true
+var direction = Vector3()
 
-var motion = Vector2(0, 0)
+var is_left = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	change_state("idle")
-	
+
 func _process(delta):
-	if $StateMachine.current_state.name != "die":
-		fall(delta)
+	direction = Global.player.global_position - global_position
 	
-		move_and_slide(motion, UP)
-	
-func fall(delta):
-	
-	motion.y += GRAVITY * delta
-	
-	if is_on_floor():
-		motion.y = 0
-	if is_on_ceiling():
-		motion.y += GRAVITY* 3 * delta
+	direction = direction.normalized()
+	if direction.x < 0 and not is_left:
+		is_left = true
+		scale.x = 1
+	elif direction.x > 0 and is_left:
+		is_left = false
+		scale.x = -1
 
 func _on_DetectBody_area_entered(area):
 	if area.is_in_group("attack"):
@@ -39,18 +36,5 @@ func _on_AnimatedSprite_animation_finished():
 		drop.position = position
 		get_parent().add_child(drop)
 		queue_free()
-
-
-func _on_DetectEnemy_body_entered(body):
-	if body.is_in_group("Player"):
-		change_state("run")
-		$Timer.stop()
-
-
-func _on_DetectEnemy_body_exited(body):
-	if body.is_in_group("Player") and $Timer.is_stopped():
-		$Timer.start()
-			
-func _on_Timer_timeout():
-	if $Stats.hp > 0:	
+	elif (sprite.animation == "attack"):
 		change_state("idle")

@@ -24,8 +24,6 @@ func update(body, delta):
 		elif direction.x == 1 and is_left:
 			is_left = false
 			body.scale.x = -1
-			
-		print(body.scale)
 	
 	distance = abs(body.position.x - goal_position_x)
 	

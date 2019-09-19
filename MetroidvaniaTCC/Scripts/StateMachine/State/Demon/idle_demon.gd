@@ -4,11 +4,9 @@ var time = 0
 
 # need implemantation
 func update(body, delta):
-	
 	body.sprite.play("idle")
-	
+	body.animation.play("idle")
 	time += delta
-	if time >= 1:
+	if time >= 2:
 		time = 0
-		body.is_left = !body.is_left
-		body.scale.x *= -1
+		return "attack"

@@ -62,7 +62,6 @@ tracks/0/keys = {
 }
 
 [node name="Skeleton" instance=ExtResource( 1 )]
-collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
