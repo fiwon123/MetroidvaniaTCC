@@ -34,6 +34,7 @@ func _process(delta):
 			attack()
 			update_GUI()
 		else:
+			$DetectBody/CollisionShape2D2.disabled = true
 			sprite.play("die")
 			motion.x = 0
 		
@@ -108,26 +109,10 @@ func _on_AnimatedSprite_animation_finished():
 		is_hurt = false
 	elif sprite.animation == "die":
 		get_tree().reload_current_scene()
-	
-	
-
-
-
 
 func _on_DetectBody_area_entered(area):
 	if area.is_in_group("Monster"):
-		is_attacking = false
-		sprite.stop()
-		sprite.play("hurt")
-		if not sprite.flip_h:
-			motion.x = -1000
-			motion.y = -350
-		else:
-			motion.x = 1000
-			motion.y = -350
-		move_and_slide(motion, UP)
-		is_hurt = true
-		stats.hp -= 10
+		take_damage()
 
 func recover_life(quantity):
 	if stats.hp < stats.max_hp:
@@ -137,15 +122,18 @@ func recover_life(quantity):
 
 func _on_DetectBody_body_entered(body):
 	if body.is_in_group("Monster"):
-		is_attacking = false
-		sprite.stop()
-		sprite.play("hurt")
-		if not sprite.flip_h:
-			motion.x = -1000
-			motion.y = -350
-		else:
-			motion.x = 1000
-			motion.y = -350
-		move_and_slide(motion, UP)
-		is_hurt = true
-		stats.hp -= 10
+		take_damage()
+		
+func take_damage():
+	is_attacking = false
+	sprite.stop()
+	sprite.play("hurt")
+	if not sprite.flip_h:
+		motion.x = -1000
+		motion.y = -350
+	else:
+		motion.x = 1000
+		motion.y = -350
+	move_and_slide(motion, UP)
+	is_hurt = true
+	stats.hp -= 10
