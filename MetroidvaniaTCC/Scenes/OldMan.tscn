@@ -28,7 +28,7 @@ is_need_interact = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="2"]
 frames = SubResource( 1 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="Tween" type="Tween" parent="." index="3"]

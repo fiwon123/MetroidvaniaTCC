@@ -11,6 +11,7 @@ func _process(delta):
 		if body_ref != null and !take_new_attack:
 			body_ref.have_new_attack = true
 			take_new_attack = true
+			Global.GUI.set_message("Habilidade Nova\nSua espada pode quebrar Algumas barreiras")
 
 func _on_OldMan_body_entered(body):
 	var tween = get_node("Tween")
