@@ -22,4 +22,6 @@ func _on_AnimatedSprite_animation_finished():
 		var drop = skill.instance()
 		drop.position = position
 		get_parent().add_child(drop)
+		Global.is_trigger3 = true
+		Global.is_defeat_boss1 = true
 		queue_free()

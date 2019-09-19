@@ -1078,13 +1078,130 @@ texture = ExtResource( 18 )
 [node name="Letter" parent="." instance=ExtResource( 19 )]
 position = Vector2( 944.777, 380.552 )
 
-[node name="Spike" parent="." groups=[
+[node name="Spikes" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Spike" parent="Spikes" groups=[
 "Monster",
 ] instance=ExtResource( 20 )]
 position = Vector2( 488.705, 425.988 )
 
+[node name="Spike2" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 1027, 409 )
+
+[node name="Spike3" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 1254, 410 )
+
+[node name="Spike4" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 1646, 587 )
+
+[node name="Spike5" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 2276, 411 )
+
+[node name="Spike6" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 2722, 410 )
+
+[node name="Spike7" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 3663, 411 )
+
+[node name="Spike8" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 3299, 440 )
+
+[node name="Spike9" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 2357, 732 )
+
+[node name="Spike10" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 2032, 892 )
+
+[node name="Spike11" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 1351, 777 )
+
+[node name="Spike12" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 1104, 905 )
+
+[node name="Spike13" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 585, 989 )
+
+[node name="Spike14" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 422, 683 )
+
+[node name="Spike15" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 197, 984 )
+
+[node name="Spike16" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 242, 1290 )
+
+[node name="Spike17" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 774, 1289 )
+
+[node name="Spike18" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 3080, 1033 )
+
+[node name="Spike19" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 3513, 875 )
+
+[node name="Spike20" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 3492, 1114 )
+
+[node name="Spike21" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 3266, 1303 )
+
+[node name="Spike22" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 9330, 588 )
+
+[node name="Spike23" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 10108, 586 )
+
+[node name="Spike24" parent="Spikes" groups=[
+"Monster",
+] instance=ExtResource( 20 )]
+position = Vector2( 9111, 587 )
+
 [node name="Barreiras" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Barreira" parent="Barreiras" instance=ExtResource( 21 )]
 editor/display_folded = true
@@ -1104,6 +1221,7 @@ position = Vector2( 137.49, 42.8138 )
 [node name="Barreira2" parent="Barreiras" instance=ExtResource( 21 )]
 editor/display_folded = true
 position = Vector2( 8274.17, 515.786 )
+x = 1
 
 [node name="Trigger2" parent="Barreiras/Barreira2" instance=ExtResource( 22 )]
 position = Vector2( -133.17, -3.78601 )
@@ -1117,20 +1235,24 @@ shape = SubResource( 12 )
 position = Vector2( -1822.82, 451.752 )
 
 [node name="Barreira3" parent="Barreiras" instance=ExtResource( 21 )]
+editor/display_folded = true
 position = Vector2( 6180, -58 )
 need_attack = true
+x = 2
 
 [node name="Sprite" parent="Barreiras/Barreira3" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 2
+frame = 5
 
 [node name="Barreira4" parent="Barreiras" instance=ExtResource( 21 )]
+editor/display_folded = true
 position = Vector2( 6761, -523 )
 need_attack = true
+x = 3
 
 [node name="Sprite" parent="Barreiras/Barreira4" index="0"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
-frame = 2
+frame = 5
 
 [node name="ObjectsVila" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1277,11 +1399,11 @@ position = Vector2( 11813, 585 )
 
 [node name="Player" parent="." instance=ExtResource( 39 )]
 editor/display_folded = true
-position = Vector2( 321, 1527 )
+position = Vector2( 4414, 671 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"
-frame = 2
+frame = 0
 
 [node name="Stats" parent="Player" index="3"]
 max_hp = 50
@@ -1784,7 +1906,6 @@ shape = SubResource( 49 )
 [node name="Triggers" type="Node2D" parent="."]
 
 [node name="TriggerBegin" parent="Triggers" instance=ExtResource( 22 )]
-editor/display_folded = true
 position = Vector2( 308.287, 370.574 )
 script = ExtResource( 49 )
 
@@ -1820,6 +1941,7 @@ cena = "cena5"
 shape = SubResource( 41 )
 
 [node name="TriggerCastle" parent="Triggers" instance=ExtResource( 22 )]
+editor/display_folded = true
 position = Vector2( 4206, 786 )
 script = ExtResource( 53 )
 cena = "cena7"
@@ -1845,6 +1967,10 @@ position = Vector2( 7563, -570 )
 
 [connection signal="animation_finished" from="AnimationCutScenes" to="." method="_on_AnimationCutScenes_animation_finished"]
 [connection signal="input_event" from="Letter" to="Letter" method="_on_Trigger_input_event"]
+[connection signal="body_entered" from="Triggers/TriggerBegin" to="Triggers/TriggerBegin" method="_on_TriggerBegin_body_entered"]
+[connection signal="body_entered" from="Triggers/TriggerSubsolo" to="Triggers/TriggerSubsolo" method="_on_TriggerSubsolo_body_entered"]
+[connection signal="body_entered" from="Triggers/TriggerJump" to="Triggers/TriggerJump" method="_on_TriggerJump_body_entered"]
+[connection signal="body_entered" from="Triggers/TriggerCastle" to="Triggers/TriggerCastle" method="_on_TriggerCastle_body_entered"]
 
 [editable path="Barreiras/Barreira/Trigger"]
 

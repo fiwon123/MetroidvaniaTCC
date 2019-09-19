@@ -8,6 +8,17 @@ var player
 var boss1
 
 var save_position = null
+#Saves
+var is_trigger1 = false
+var is_trigger2 = false
+var is_trigger3 = false
+var is_trigger4 = false
+var is_trigger5 = false
+var is_destroy_barrier1 = false
+var is_destroy_barrier2 = false
+var is_destroy_barrier3 = false
+var is_destroy_barrier4 = false
+var is_defeat_boss1 = false
 
 #Scenes
 var MAIN_MENU = "res://Scenes/Screens/MainMenu.tscn"
