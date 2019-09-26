@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Girl.wav-7db0814ab32e6f3198303ca0327ff3ad.sample"
+
+[deps]
+
+source_file="res://SFX/Voices/Girl.wav"
+dest_files=[ "res://.import/Girl.wav-7db0814ab32e6f3198303ca0327ff3ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

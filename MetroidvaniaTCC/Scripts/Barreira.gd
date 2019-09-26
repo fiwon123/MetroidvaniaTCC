@@ -41,6 +41,9 @@ func start_disappear():
 
 
 func _on_Area2D2_area_entered(area):
-	if need_attack and area.is_in_group("attack"):
-		if area.get_parent().get_parent().have_new_attack: 
+	if area.is_in_group("attack"):
+		$AudioStreamPlayer.play()
+		$AnimationPlayer.stop()
+		$AnimationPlayer.play("light")
+		if area.get_parent().get_parent().have_new_attack and need_attack: 
 			start_disappear()

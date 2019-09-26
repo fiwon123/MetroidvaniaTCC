@@ -4,10 +4,14 @@ var rng = RandomNumberGenerator.new()
 
 var started  = false
 
+var sound = "res://SFX/Boss2/Appear.ogg"
+
 # Called when the node enters the scene tree for the first time.
 func update(body, delta):
 	if !started:
 		body.sprite.play("appear")
+		body.audio.stream = load(sound)
+		body.audio.play()
 		
 		rng.randomize()
 		

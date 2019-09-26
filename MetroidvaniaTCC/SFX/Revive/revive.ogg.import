@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/revive.ogg-be727c10c419e449842960c6c42486ed.oggstr"
+
+[deps]
+
+source_file="res://SFX/Revive/revive.ogg"
+dest_files=[ "res://.import/revive.ogg-be727c10c419e449842960c6c42486ed.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

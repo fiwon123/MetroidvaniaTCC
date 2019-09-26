@@ -13,6 +13,7 @@ var is_hurt = false
 var max_jump = 1
 var times_jump = 0
 
+const dead_sound = "res://SFX/Revive/revive.ogg"
 const walk_sound = ["res://SFX/Step-3.wav"]
 const sword_sound = ["res://SFX/Sword-1.wav"]
 
@@ -20,14 +21,15 @@ func _ready():
 	Global.player = self
 	if Global.save_position != null:
 		global_position = Global.save_position
+		
+		if (Global.is_defeat_boss1):
+			max_jump = 2
 
 func _process(delta):
 	motion.x = 0
-	
 	fall(delta)
 	
 	if (not Global.game.is_stop):
-		
 		if stats.hp > 0:
 			move()
 			jump()
@@ -37,6 +39,9 @@ func _process(delta):
 			$DetectBody/CollisionShape2D2.disabled = true
 			sprite.play("die")
 			motion.x = 0
+			if ($AudioStreamPlayer.stream != load(dead_sound)):
+				$AudioStreamPlayer.stream = load(dead_sound)
+				$AudioStreamPlayer.play()
 		
 	else:
 		is_attacking = false
@@ -107,11 +112,9 @@ func _on_AnimatedSprite_animation_finished():
 		sprite.play("jump")
 	elif sprite.animation == "hurt":
 		is_hurt = false
-	elif sprite.animation == "die":
-		get_tree().reload_current_scene()
 
 func _on_DetectBody_area_entered(area):
-	if area.is_in_group("Monster"):
+	if area.is_in_group("Monster") and stats.hp > 0:
 		take_damage()
 
 func recover_life(quantity):
@@ -137,3 +140,7 @@ func take_damage():
 	move_and_slide(motion, UP)
 	is_hurt = true
 	stats.hp -= 10
+
+func _on_AudioStreamPlayer_finished():
+	if ($AudioStreamPlayer.stream == load(dead_sound)):
+		get_tree().reload_current_scene()

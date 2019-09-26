@@ -32,14 +32,17 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Boss2" index="0" instance=ExtResource( 1 )]
+[node name="Boss2" instance=ExtResource( 1 )]
 collision_layer = 32
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 scale = Vector2( 2, 2 )
 frames = ExtResource( 3 )
-frame = 6
+frame = 5
+
+[node name="AudioStreamPlayer" parent="." index="1"]
+volume_db = -5.0
 
 [node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource( 1 )

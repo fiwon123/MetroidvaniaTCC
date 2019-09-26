@@ -25,6 +25,9 @@ func start_dialogue():
 
 func shake_camera():
 	Global.Camera2D.shake()
+	
+func woosh():
+	$AudioStreamPlayer.play()
 
 func dialog_finish():
 	index += 1

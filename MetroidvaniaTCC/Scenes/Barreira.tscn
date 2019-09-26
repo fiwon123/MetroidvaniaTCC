@@ -1,21 +1,15 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Barreira.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Barreira/Normal/energyV001effect000.png" type="Texture" id=2]
-[ext_resource path="res://GFX/Barreira/Normal/energyV001effect001.png" type="Texture" id=3]
-[ext_resource path="res://GFX/Barreira/Normal/energyV001effect002.png" type="Texture" id=4]
-[ext_resource path="res://GFX/Barreira/Normal/energyV001effect003.png" type="Texture" id=5]
-[ext_resource path="res://GFX/Barreira/Normal/energyV001effect004.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Barreira/Normal/energyV001effect005.png" type="Texture" id=7]
-[ext_resource path="res://GFX/Barreira/Normal/energyV001effect006.png" type="Texture" id=8]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "default",
-"speed": 10.0
-} ]
+[ext_resource path="res://SFX/Shield/shield.ogg" type="AudioStream" id=2]
+[ext_resource path="res://GFX/Barreira/Normal/energyV001effect000.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Barreira/Normal/energyV001effect001.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Barreira/Normal/energyV001effect002.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Barreira/Normal/energyV001effect003.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Barreira/Normal/energyV001effect004.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Barreira/Normal/energyV001effect005.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Barreira/Normal/energyV001effect006.png" type="Texture" id=9]
+[ext_resource path="res://GFX/light/light.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 92.6388, 96.9748 )
@@ -26,15 +20,32 @@ extents = Vector2( 197.048, 102.017 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 92.7573, 97.3549 )
 
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=5]
+resource_name = "light"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.01, 2.0, 0.01 ]
+}
+
 [node name="Barreira" type="StaticBody2D"]
 collision_layer = 16
 script = ExtResource( 1 )
-
-[node name="Sprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 3, 3 )
-frames = SubResource( 1 )
-frame = 3
-playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -52,6 +63,23 @@ collision_layer = 16
 shape = SubResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+frame = 5
+playing = true
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 10 )
+energy = 0.01
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/light = SubResource( 5 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

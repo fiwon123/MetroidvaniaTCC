@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Step 2 (online-audio-converter.com).ogg-23f493b045abdb2bb559ab523ff512bf.oggstr"
+
+[deps]
+
+source_file="res://SFX/Step 2 (online-audio-converter.com).ogg"
+dest_files=[ "res://.import/Step 2 (online-audio-converter.com).ogg-23f493b045abdb2bb559ab523ff512bf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

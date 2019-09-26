@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Leaver.wav-e175fc69236dbba7cdc9309d4376c4f3.sample"
+
+[deps]
+
+source_file="res://SFX/Leaver/Leaver.wav"
+dest_files=[ "res://.import/Leaver.wav-e175fc69236dbba7cdc9309d4376c4f3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

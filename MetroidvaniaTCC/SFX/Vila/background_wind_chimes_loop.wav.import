@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/background_wind_chimes_loop.wav-d4603b348830847ebd378a2f73e61612.sample"
+
+[deps]
+
+source_file="res://SFX/Vila/background_wind_chimes_loop.wav"
+dest_files=[ "res://.import/background_wind_chimes_loop.wav-d4603b348830847ebd378a2f73e61612.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

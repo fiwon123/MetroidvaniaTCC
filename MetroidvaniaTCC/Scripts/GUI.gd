@@ -16,4 +16,5 @@ func set_message(text):
 	message.text = text
 	
 func show_message():
+	$AudioStreamPlayer.play()
 	$AnimationPlayer.play("show_message")

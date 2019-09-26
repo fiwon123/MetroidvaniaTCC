@@ -9,6 +9,7 @@ func _input(event):
 			get_parent().start_disappear()
 			if $Sprite.texture != load("res://GFX/Lever/down.png"):
 				$Sprite.texture = load("res://GFX/Lever/down.png")
+				$AudioStreamPlayer.play()
 		
 
 func _on_Lever_body_entered(body):

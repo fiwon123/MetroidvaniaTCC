@@ -9,7 +9,7 @@ func start_battle():
 func _on_DetectBody_area_entered(area):
 	if area.is_in_group("attack"):
 		change_state("hit")
-
+	
 
 func _on_AnimatedSprite_animation_finished():
 	if (sprite.animation == "die"):

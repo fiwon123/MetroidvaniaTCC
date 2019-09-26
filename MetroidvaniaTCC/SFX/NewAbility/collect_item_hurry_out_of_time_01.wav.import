@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/collect_item_hurry_out_of_time_01.wav-e71cedf918bc4c552b3e9e1c01062699.sample"
+
+[deps]
+
+source_file="res://SFX/NewAbility/collect_item_hurry_out_of_time_01.wav"
+dest_files=[ "res://.import/collect_item_hurry_out_of_time_01.wav-e71cedf918bc4c552b3e9e1c01062699.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

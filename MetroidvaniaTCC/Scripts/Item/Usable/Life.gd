@@ -16,4 +16,11 @@ func _ready():
 func _on_Life_body_entered(body):
 	if body.is_in_group("Player"):
 		body.recover_life(10)
-		queue_free()
+		$CollisionShape2D.disabled = true
+		$Sprite.visible = false
+		$AudioStreamPlayer.play()
+		
+
+
+func _on_AudioStreamPlayer_finished():
+	queue_free()

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Appear.ogg-b880fcf46441756b8587e45101fcf79a.oggstr"
+
+[deps]
+
+source_file="res://SFX/Boss2/Appear.ogg"
+dest_files=[ "res://.import/Appear.ogg-b880fcf46441756b8587e45101fcf79a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

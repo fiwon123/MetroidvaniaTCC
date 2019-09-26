@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Item/Item.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Item/Usable/Life.gd" type="Script" id=2]
 [ext_resource path="res://GFX/Hearts/heart_01.png" type="Texture" id=3]
+[ext_resource path="res://SFX/Heal/heal2.ogg" type="AudioStream" id=4]
 
 [node name="Life" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-nameItem = "Life"
-description = "Recover Life"
 
 [node name="Sprite" parent="." index="0"]
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource( 4 )
+volume_db = -5.0
+
 [connection signal="body_entered" from="." to="." method="_on_Life_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
