@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/Characters/Monster/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Skull.gd" type="Script" id=2]
@@ -42,8 +42,11 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 14.3255, 22.4588 )
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 7.01397, 12.6118 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 14.5602, 20.3114 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "hit"
@@ -69,10 +72,11 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
+frame = 1
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( -1.17035, 9.64014 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [node name="idle" type="Node" parent="StateMachine" index="0"]
 script = ExtResource( 20 )
@@ -88,6 +92,9 @@ script = ExtResource( 23 )
 
 [node name="DetectBody" parent="." index="5"]
 position = Vector2( -0.554779, 4.16085 )
+
+[node name="CollisionShape2D2" parent="DetectBody" index="0"]
+shape = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
 anims/hit = SubResource( 3 )
