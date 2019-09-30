@@ -13,7 +13,7 @@ func _ready():
 	change_state("idle")
 	
 func _on_DetectBody_area_entered(area):
-	if area.is_in_group("attack"):
+	if area.is_in_group("attack") and $Stats.hp > 0:
 		change_state("hit")
 
 
@@ -25,7 +25,7 @@ func _on_AnimatedSprite_animation_finished():
 		queue_free()
 
 func _on_DetectEnemy_body_entered(body):
-	if (body.is_in_group("Player")):
+	if (body.is_in_group("Player")) and $Stats.hp > 0:
 		change_state("attack")
 		$Timer.stop()
 

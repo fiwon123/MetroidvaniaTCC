@@ -29,7 +29,7 @@ func fall(delta):
 		motion.y += GRAVITY* 3 * delta
 
 func _on_DetectBody_area_entered(area):
-	if area.is_in_group("attack"):
+	if area.is_in_group("attack") and $Stats.hp > 0:
 		change_state("hit")
 
 
@@ -42,7 +42,7 @@ func _on_AnimatedSprite_animation_finished():
 
 
 func _on_DetectEnemy_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player")  and $Stats.hp > 0:
 		change_state("run")
 		$Timer.stop()
 
@@ -52,5 +52,5 @@ func _on_DetectEnemy_body_exited(body):
 		$Timer.start()
 			
 func _on_Timer_timeout():
-	if $Stats.hp > 0:	
+	if $Stats.hp > 0  and $Stats.hp > 0:	
 		change_state("idle")

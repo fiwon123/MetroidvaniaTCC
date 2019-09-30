@@ -1249,6 +1249,7 @@ x = 2
 
 [node name="Sprite" parent="Barreiras/Barreira3" index="5"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
+frame = 6
 
 [node name="Barreira4" parent="Barreiras" instance=ExtResource( 22 )]
 editor/display_folded = true
@@ -1258,6 +1259,7 @@ x = 3
 
 [node name="Sprite" parent="Barreiras/Barreira4" index="5"]
 modulate = Color( 0.996078, 0.501961, 1, 1 )
+frame = 6
 
 [node name="ObjectsVila" type="Node2D" parent="."]
 editor/display_folded = true
@@ -1403,8 +1405,7 @@ position = Vector2( 11538, 550 )
 position = Vector2( 11813, 585 )
 
 [node name="Player" parent="." instance=ExtResource( 40 )]
-editor/display_folded = true
-position = Vector2( 337, 414 )
+position = Vector2( 624, 414 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 animation = "idle"

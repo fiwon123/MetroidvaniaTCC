@@ -1,6 +1,7 @@
 extends Node2D
 
 var area = null
+var oldArea = null
 
 func _process(delta):
 	if area != null:
@@ -11,4 +12,10 @@ func _process(delta):
 
 func body_entered(body, part):
 	if body.is_in_group("Player"):
+		oldArea = area
 		area = part
+
+func body_exited(body, part):
+	if body.is_in_group("Player"):
+		if (part == area):
+			area = oldArea

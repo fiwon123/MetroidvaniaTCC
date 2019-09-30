@@ -5,9 +5,8 @@ func update(body, delta):
 	body.animation.play("hit")
 	
 	body.stats.hp -= 50
-	
+
 	if body.stats.hp <= 0:
-		print("Die")
 		return "die"
 	else:
 		return "attack"

@@ -16,3 +16,7 @@ func _ready():
 
 func _on_Part_body_entered(body):
 	get_parent().body_entered(body, self)
+
+
+func _on_Part_body_exited(body):
+	get_parent().body_exited(body, self)

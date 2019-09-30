@@ -6,19 +6,19 @@
 [ext_resource path="res://GFX/Enemies/skull/idle/tile001.png" type="Texture" id=4]
 [ext_resource path="res://GFX/Enemies/skull/idle/tile002.png" type="Texture" id=5]
 [ext_resource path="res://GFX/Enemies/skull/idle/tile003.png" type="Texture" id=6]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile000.png" type="Texture" id=7]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile001.png" type="Texture" id=8]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile002.png" type="Texture" id=9]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile003.png" type="Texture" id=10]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile004.png" type="Texture" id=11]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile005.png" type="Texture" id=12]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile006.png" type="Texture" id=13]
-[ext_resource path="res://GFX/Enemies/skull/attack/tile007.png" type="Texture" id=14]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=15]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=16]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=17]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=18]
-[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=19]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-1.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-2.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-3.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-4.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Enemies/enemy-death/enemy-death-5.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile000.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile001.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile002.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile003.png" type="Texture" id=15]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile004.png" type="Texture" id=16]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile005.png" type="Texture" id=17]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile006.png" type="Texture" id=18]
+[ext_resource path="res://GFX/Enemies/skull/attack/tile007.png" type="Texture" id=19]
 [ext_resource path="res://Scripts/StateMachine/State/Skull/idle_skull.gd" type="Script" id=20]
 [ext_resource path="res://Scripts/StateMachine/State/Skull/attack_skull.gd" type="Script" id=21]
 [ext_resource path="res://Scripts/StateMachine/State/Skull/die_skull.gd" type="Script" id=22]
@@ -31,14 +31,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "attack",
 "speed": 5.0
 } ]
 
