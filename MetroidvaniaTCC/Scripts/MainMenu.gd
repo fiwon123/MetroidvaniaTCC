@@ -1,7 +1,7 @@
 extends Control
 
 func _on_ButtonStart_pressed():
-	get_tree().change_scene(Global.GAME)
+	get_tree().change_scene(Global.SAVES)
 
 func _on_ButtonOptions_pressed():
 	get_tree().change_scene(Global.OPTIONS)
