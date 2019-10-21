@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/BRPG_Vanquisher_FULL_Loop.wav-4bc8580d2b0674a5db22513d7e652c27.sample"
+
+[deps]
+
+source_file="res://SFX/BRPG_Vanquisher_FULL_Loop.wav"
+dest_files=[ "res://.import/BRPG_Vanquisher_FULL_Loop.wav-4bc8580d2b0674a5db22513d7e652c27.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

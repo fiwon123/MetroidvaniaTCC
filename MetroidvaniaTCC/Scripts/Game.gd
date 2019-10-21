@@ -9,6 +9,9 @@ onready var anim_cutscene = $AnimationCutScenes
 
 func _ready():
 	Global.game = self
+	
+	if (Global.is_trigger1 == true):
+		Global.music.play()
 
 func pause_animation():
 	$AnimationCutScenes.playback_process_mode = AnimationPlayer.ANIMATION_PROCESS_MANUAL
@@ -41,4 +44,7 @@ func showTutorialJump():
 	pass
 
 func _on_AnimationCutScenes_animation_finished(anim_name):
+	if (anim_name == "cena1"):
+		Global.music.play()
+		
 	is_stop = false

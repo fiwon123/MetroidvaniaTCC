@@ -11,5 +11,7 @@ func _on_ButtonResume_button_down():
 
 
 func _on_ButtonExit_button_down():
-	get_tree().change_scene("res://Scenes/Screens/MainMenu.tscn")
 	get_tree().paused = false
+	Global.music.stop()
+	get_tree().change_scene("res://Scenes/Screens/MainMenu.tscn")
+
