@@ -28,9 +28,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -240.0
-margin_top = -197.5
+margin_top = -204.0
 margin_right = 240.0
-margin_bottom = 197.5
+margin_bottom = 204.0
 custom_constants/separation = 20
 __meta__ = {
 "_edit_group_": true
@@ -38,44 +38,36 @@ __meta__ = {
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 margin_right = 480.0
-margin_bottom = 87.0
+margin_bottom = 177.0
 custom_fonts/font = SubResource( 1 )
-text = "Remember"
+text = "Remember
+"
 align = 1
 
 [node name="ButtonStart" type="Button" parent="VBoxContainer"]
-margin_top = 107.0
+margin_top = 197.0
 margin_right = 480.0
-margin_bottom = 164.0
+margin_bottom = 254.0
 custom_fonts/font = SubResource( 2 )
-text = "Start"
-flat = true
-
-[node name="ButtonOptions" type="Button" parent="VBoxContainer"]
-margin_top = 184.0
-margin_right = 480.0
-margin_bottom = 241.0
-custom_fonts/font = SubResource( 2 )
-text = "Options"
+text = "Iniciar"
 flat = true
 
 [node name="ButtonCredits" type="Button" parent="VBoxContainer"]
-margin_top = 261.0
+margin_top = 274.0
 margin_right = 480.0
-margin_bottom = 318.0
+margin_bottom = 331.0
 custom_fonts/font = SubResource( 2 )
-text = "Credits"
+text = "Créditos"
 flat = true
 
 [node name="ButtonExit" type="Button" parent="VBoxContainer"]
-margin_top = 338.0
+margin_top = 351.0
 margin_right = 480.0
-margin_bottom = 395.0
+margin_bottom = 408.0
 custom_fonts/font = SubResource( 2 )
-text = "Exit"
+text = "Sair"
 flat = true
 
 [connection signal="pressed" from="VBoxContainer/ButtonStart" to="." method="_on_ButtonStart_pressed"]
-[connection signal="pressed" from="VBoxContainer/ButtonOptions" to="." method="_on_ButtonOptions_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonCredits" to="." method="_on_ButtonCredits_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonExit" to="." method="_on_ButtonExit_pressed"]

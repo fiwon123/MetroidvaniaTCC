@@ -35,13 +35,13 @@ text = "Parabéns você venceu!"
 
 [node name="Button" type="Button" parent="ColorRect"]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 margin_left = -46.0
-margin_top = 118.77
+margin_top = -67.6492
 margin_right = 46.0
-margin_bottom = 153.77
+margin_bottom = -32.6492
 custom_fonts/font = SubResource( 2 )
 text = "Sair"
 flat = true

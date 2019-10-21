@@ -33,23 +33,24 @@ custom_constants/separation = 20
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 margin_right = 1080.0
-margin_bottom = 58.0
+margin_bottom = 119.0
 custom_fonts/font = SubResource( 1 )
-text = "Credits"
+text = "Créditos
+"
 align = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 78.0
+margin_top = 139.0
 margin_right = 1080.0
-margin_bottom = 117.0
+margin_bottom = 178.0
 custom_fonts/font = SubResource( 2 )
 text = "Felipe Seiji Inoue"
 align = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
-margin_top = 137.0
+margin_top = 198.0
 margin_right = 1080.0
-margin_bottom = 176.0
+margin_bottom = 237.0
 custom_fonts/font = SubResource( 2 )
 text = "Fábio Feliciano de Oliveira"
 align = 1
@@ -60,7 +61,7 @@ margin_top = 25.4848
 margin_right = 146.377
 margin_bottom = 68.4848
 custom_fonts/font = SubResource( 3 )
-text = "Go Back"
+text = "Voltar"
 flat = true
 
 [connection signal="pressed" from="ButtonGoBack" to="." method="_on_ButtonGoBack_pressed"]
