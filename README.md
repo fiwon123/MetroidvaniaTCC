@@ -1,4 +1,4 @@
-# Remember :thought_balloon:
+# Remember :video_game:
 Projeto Final do IFSP Campus Campinas para conclusão do curso de Análise e Desenvolvimento de Sistemas (ADS).
 
 Caso esteja interessado no projeto, vá até a aba Release e baixe a versão mais recente. (https://github.com/fiwon123/MetroidvaniaTCC/releases)
