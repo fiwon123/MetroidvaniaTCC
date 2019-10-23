@@ -1,4 +1,10 @@
 # MetroidvaniaTCC
-IFSP project to conclusion my course 2019
+Projeto Final do IFSP Campus Campinas para conclusão do curso de Análise e Desenvolvimento de Sistemas (ADS).
 
-If you are interested in my TCC, go to Release tab and download de last version of my project .zip.
+Caso esteja interessado no projeto, vá até a aba Release e baixe a versão mais recente. (https://github.com/fiwon123/MetroidvaniaTCC/releases)
+
+O jogo vai estar disponível também no link: https://fiwon123.itch.io/remember.
+
+# Grupo
+Orientador: Prof. Fábio Feliciano de Oliveira :mortar_board:
+Aluno: Felipe Seiji Inoue :computer:
