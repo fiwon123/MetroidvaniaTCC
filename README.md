@@ -5,6 +5,8 @@ Caso esteja interessado no projeto, vá até a aba Release e baixe a versão mai
 
 O jogo vai estar disponível também no link: https://fiwon123.itch.io/remember.
 
+Confiram o wiki do jogo, onde vai estar a documentação do jogo: https://github.com/fiwon123/MetroidvaniaTCC/wiki
+
 ## Grupo :speech_balloon:
 - Orientador: Prof. Fábio Feliciano de Oliveira. :mortar_board:
 - Aluno: Felipe Seiji Inoue. :computer:
