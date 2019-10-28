@@ -9,5 +9,5 @@ Confira o wiki do jogo, com toda a documentação:
 https://github.com/fiwon123/MetroidvaniaTCC/wiki.
 
 ## Grupo :speech_balloon:
+- Autor: Felipe Seiji Inoue. :computer:
 - Orientador: Prof. Fábio Feliciano de Oliveira. :mortar_board:
-- Aluno: Felipe Seiji Inoue. :computer:
